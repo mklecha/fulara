@@ -33,7 +33,7 @@ class ServletUtils {
 		root.put("content", ftl);
 
 		StringWriter writer = new StringWriter();
-		template.process(root, writer);
+ 		template.process(root, writer);
 		return writer.toString();
 	}
 

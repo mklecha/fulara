@@ -71,6 +71,12 @@ public class LoginServlet extends HttpServlet {
         }
     }
 
+    public static void requireLogged(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        if(request.getSession(false) == null){
+            response.sendRedirect("login.html");
+        }
+    }
+
     private User getUser(Map<String, String[]> paramMap) {
         String login = paramMap.get(ServletUtils.LOGIN_PARAM)[0];
         String password = paramMap.get(ServletUtils.PASSWORD_PARAM)[0];

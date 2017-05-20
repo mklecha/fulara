@@ -7,24 +7,14 @@
 	<body>
 		<@navbar />
 
-		<div class="tab" id="main">
+		<div class="tab" id="gift">
 			<div class="container">
-				main
+				prezenty
 			</div>
 		</div>
-		<div class="tab" id="about" hidden>
+		<div class="tab" id="invitation" hidden>
 			<div class="container">
-				about
-			</div>
-		</div>
-		<div class="tab" id="compositions" hidden>
-			<div class="container">
-				compositions
-			</div>
-		</div>
-		<div class="tab" id="pieces" hidden>
-			<div class="container">
-				pieces
+				zaproszenia
 			</div>
 		</div>
 		<@footer.footer />
@@ -43,28 +33,14 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="javascript:showTab('main');">Panel administracyjny</a>
+				<a class="navbar-brand" href="javascript:showTab('gift');">Panel administracyjny</a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li class="nav-li active" id="nav-main"><a href="javascript:showTab('main');">Strona główna</a></li>
-					<li class="nav-li" id="nav-about"><a href="javascript:showTab('about');">O mnie</a></li>
-					<li class="nav-li" id="nav-compositions"><a href="javascript:showTab('compositions');">Moje kompozycje</a></li>
-					<li class="nav-li" id="nav-pieces"><a href="javascript:showTab('pieces');">Utwory</a></li>
-					<!--<li class="dropdown">-->
-					<!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
-					<!--<ul class="dropdown-menu">-->
-					<!--<li><a href="#">Action</a></li>-->
-					<!--<li><a href="#">Another action</a></li>-->
-					<!--<li><a href="#">Something else here</a></li>-->
-					<!--<li role="separator" class="divider"></li>-->
-					<!--<li><a href="#">Separated link</a></li>-->
-					<!--<li role="separator" class="divider"></li>-->
-					<!--<li><a href="#">One more separated link</a></li>-->
-					<!--</ul>-->
-					<!--</li>-->
+					<li class="nav-li active" id="nav-main"><a href="javascript:showTab('gift');">Prezenty</a></li>
+					<li class="nav-li" id="nav-about"><a href="javascript:showTab('invitation');">Zaproszenia</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="javascript:logOut();">Wyloguj</a></li>

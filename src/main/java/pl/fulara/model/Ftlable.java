@@ -6,7 +6,6 @@ import java.util.Map;
 public abstract class Ftlable {
 	public Map<String, Object> toFtl() {
 		ObjectMapper oMapper = new ObjectMapper();
-		Map resultMap = oMapper.convertValue(this, Map.class);
-		return resultMap;
+        return oMapper.convertValue(this, Map.class);
 	}
 }

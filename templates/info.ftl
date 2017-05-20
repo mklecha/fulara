@@ -3,15 +3,15 @@
 <#import '/common/footer.ftl' as footer/>
 <!DOCTYPE html>
 <html lang="en">
-	<@head.head 'Maja i Jędrek - strona ślubna'/>
+	<@head.head 'Informacje - Maja i Jędrek'/>
 	<body>
-		<@header.header 'main'/>
+		<@header.header 'info'/>
 
 
         <div style="margin-top: 100px;">
-            <h1>Główna</h1>
+            <h1>Informacje</h1>
         </div>
-        <@footer.footer />
+		<@footer.footer />
 
     </body>
 </html>
