@@ -35,7 +35,9 @@ public class UserServlet extends HttpServlet {
         HttpSession session = request.getSession(false);
         try {
 
-            LoginServlet.requireLogged(request, response);
+            if(LoginServlet.requireLogged(request, response)){
+                return;
+            }
 
             String login = (String) session.getAttribute(ServletUtils.LOGIN_PARAM);
             String page = getAdminPage(login);

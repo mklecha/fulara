@@ -71,10 +71,13 @@ public class LoginServlet extends HttpServlet {
         }
     }
 
-    public static void requireLogged(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        if(request.getSession(false) == null){
+    public static boolean requireLogged(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        HttpSession session = request.getSession(false);
+        if(session == null){
             response.sendRedirect("login.html");
+            return true;
         }
+        return false;
     }
 
     private User getUser(Map<String, String[]> paramMap) {
