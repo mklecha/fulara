@@ -1,8 +1,9 @@
 package pl.fulara.servlet;
 
+import com.google.inject.internal.util.Lists;
 import freemarker.template.TemplateException;
 import org.springframework.jdbc.core.JdbcTemplate;
-import pl.fulara.model.Ftlable;
+import pl.fulara.model.*;
 
 import javax.servlet.ServletContext;
 import javax.servlet.annotation.WebServlet;
@@ -12,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 @WebServlet(name = "gifts", urlPatterns = {"/gifts.html"})
 public class GiftServlet extends HttpServlet {
@@ -19,9 +22,6 @@ public class GiftServlet extends HttpServlet {
     private JdbcTemplate jdbcTemplate;
     private String ftlTemplateDir;
     private String mainPageTemplateName = "gifts.ftl";
-
-
-    private String defaultPhoto = "";
 
     @Override
     public void init() {
@@ -43,8 +43,8 @@ public class GiftServlet extends HttpServlet {
         }
     }
 
-    private ArrayList<Gift> getGifts() {
-        return new ArrayList<>();
+    private List<Gift> getGifts() {
+        return jdbcTemplate.query(Gift.LIST_QUERY, new GiftRowMapper());
     }
 
     private String getPage(Ftlable data) throws IOException, TemplateException {
@@ -52,55 +52,14 @@ public class GiftServlet extends HttpServlet {
     }
 
 
-    class Gift extends Ftlable {
-        String name;
-        String description;
-        String link;
-        String photo;
-        boolean reserved;
-
-
-        public Gift(String name, String description, String link, String photo, int reserved) {
-            this.name = name;
-            this.description = description;
-            this.link = link;
-            if (photo.isEmpty()) {
-                this.photo = defaultPhoto;
-            } else {
-                this.photo = photo;
-            }
-            this.reserved = reserved != 0;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public String getDescription() {
-            return description;
-        }
-
-        public String getLink() {
-            return link;
-        }
-
-        public String getPhoto() {
-            return photo;
-        }
-
-        public boolean isReserved() {
-            return reserved;
-        }
-    }
-
     class Gifts extends Ftlable {
-        private ArrayList<Gift> gifts;
+        private List<Gift> gifts;
 
-        Gifts(ArrayList<Gift> gifts) {
+        Gifts(List<Gift> gifts) {
             this.gifts = gifts;
         }
 
-        public ArrayList<Gift> getGifts() {
+        public List<Gift> getGifts() {
             return gifts;
         }
     }

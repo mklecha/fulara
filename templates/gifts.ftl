@@ -11,7 +11,13 @@
         <div style="margin-top: 100px;">
             <h1>Lista prezentów</h1>
             <#if content.gifts??>Jest lista</#if>
-            <#if content.gifts?has_content>Jest pusta</#if>
+            <#list content.gifts as gift>
+                <div>
+                    ${gift.id}. ${gift.name} - ${gift.photo}
+                </div>
+            <#else>
+                <div>Lista pusta</div>
+            </#list>
         </div>
         <@footer.footer />
 
