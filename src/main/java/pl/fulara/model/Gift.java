@@ -8,6 +8,8 @@ public class Gift extends Ftlable implements Serializable {
 
     public static final String LIST_QUERY = "SELECT id, name, descr, link, photo, reserved FROM gift ORDER BY reserved, id";
 
+    public static final String UPDATE_RESERVARION = "UPDATE gift SET reserved = NOT RESERVED WHERE id = ?;";
+
     private int id;
     private String name;
     private String description;

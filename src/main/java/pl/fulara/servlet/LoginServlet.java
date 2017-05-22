@@ -80,6 +80,11 @@ public class LoginServlet extends HttpServlet {
         return false;
     }
 
+    public static boolean isLoggedIn(HttpServletRequest request, HttpServletResponse response){
+        HttpSession session = request.getSession(false);
+        return session != null;
+    }
+
     private User getUser(Map<String, String[]> paramMap) {
         String login = paramMap.get(ServletUtils.LOGIN_PARAM)[0];
         String password = paramMap.get(ServletUtils.PASSWORD_PARAM)[0];
