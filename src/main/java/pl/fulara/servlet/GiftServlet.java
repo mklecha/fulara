@@ -1,6 +1,5 @@
 package pl.fulara.servlet;
 
-import com.google.inject.internal.util.Lists;
 import freemarker.template.TemplateException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import pl.fulara.model.*;
@@ -11,17 +10,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @WebServlet(name = "gifts", urlPatterns = {"/gifts.html"})
 public class GiftServlet extends HttpServlet {
 
     private JdbcTemplate jdbcTemplate;
     private String ftlTemplateDir;
-    private String mainPageTemplateName = "gifts.ftl";
+    private String templateName = "gifts.ftl";
 
     @Override
     public void init() {
@@ -43,12 +39,13 @@ public class GiftServlet extends HttpServlet {
         }
     }
 
+
     private List<Gift> getGifts() {
         return jdbcTemplate.query(Gift.LIST_QUERY, new GiftRowMapper());
     }
 
     private String getPage(Ftlable data) throws IOException, TemplateException {
-        return ServletUtils.runFreemaker(ftlTemplateDir, mainPageTemplateName, data.toFtl());
+        return ServletUtils.runFreemaker(ftlTemplateDir, templateName, data.toFtl());
     }
 
 

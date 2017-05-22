@@ -21,7 +21,7 @@ public class LoginServlet extends HttpServlet {
 
     private JdbcTemplate jdbcTemplate;
     private String ftlTemplateDir;
-    private String mainPageTemplateName = "login.ftl";
+    private String templateName = "login.ftl";
 
 
     @Override
@@ -94,6 +94,6 @@ public class LoginServlet extends HttpServlet {
         Map<String, Object> data = new HashMap<>();
         if (message != null && !message.isEmpty())
             data.put("message", message);
-        return ServletUtils.runFreemaker(ftlTemplateDir, mainPageTemplateName, data);
+        return ServletUtils.runFreemaker(ftlTemplateDir, templateName, data);
     }
 }

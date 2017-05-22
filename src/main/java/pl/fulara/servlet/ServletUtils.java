@@ -37,15 +37,4 @@ class ServletUtils {
 		return writer.toString();
 	}
 
-	public static class MapResultExtractor implements ResultSetExtractor<Map<String, Object>> {
-
-		@Override
-		public Map<String, Object> extractData(ResultSet resultSet) throws SQLException, DataAccessException {
-			HashMap<String, Object> mapRet = new HashMap<>();
-			while (resultSet.next()) {
-				mapRet.put(resultSet.getString("key"), resultSet.getString("value"));
-			}
-			return mapRet;
-		}
-	}
 }

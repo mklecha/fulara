@@ -1,8 +1,6 @@
 package pl.fulara.servlet;
 
 import freemarker.template.TemplateException;
-import org.springframework.jdbc.core.JdbcTemplate;
-import pl.fulara.model.Ftlable;
 
 import javax.servlet.ServletContext;
 import javax.servlet.annotation.WebServlet;
@@ -11,13 +9,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.Map;
 
 @WebServlet(name = "info", urlPatterns = {"/info.html"})
 public class InfoServer extends HttpServlet {
 
     private String ftlTemplateDir;
-    private String mainPageTemplateName = "info.ftl";
+    private String templateName = "info.ftl";
 
 
     @Override
@@ -39,7 +36,7 @@ public class InfoServer extends HttpServlet {
     }
 
     private String getPage() throws IOException, TemplateException {
-        return ServletUtils.runFreemaker(ftlTemplateDir, mainPageTemplateName, new HashMap<String, Object>() {
+        return ServletUtils.runFreemaker(ftlTemplateDir, templateName, new HashMap<String, Object>() {
         });
     }
 }

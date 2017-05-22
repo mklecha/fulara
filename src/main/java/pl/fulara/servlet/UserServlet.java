@@ -4,7 +4,6 @@ import freemarker.template.TemplateException;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +18,7 @@ public class UserServlet extends HttpServlet {
 
     private JdbcTemplate jdbcTemplate;
     private String ftlTemplateDir;
-    private String mainPageTemplateName = "admin.ftl";
+    private String templateName = "admin.ftl";
 
 
     @Override
@@ -51,7 +50,7 @@ public class UserServlet extends HttpServlet {
     private String getAdminPage(String login) throws IOException, TemplateException {
         Map<String, Object> data = new HashMap<>();
         data.put("login", login);
-        return ServletUtils.runFreemaker(ftlTemplateDir, mainPageTemplateName, data);
+        return ServletUtils.runFreemaker(ftlTemplateDir, templateName, data);
     }
 
 }
