@@ -15,5 +15,5 @@
 	<script type="text/javascript" src="static/js/bootstrap.js"></script>
 	<!-- Javascripts -->
 	<script type="text/javascript" src="static/js/main.js"></script>
-
+    <script type="text/javascript" src="static/js/sha256.min.js"></script>
 </#macro>

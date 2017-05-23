@@ -8,6 +8,10 @@ body, html{
 	color: #5a5a5a;
 }
 
+.bromba {
+    cursor: url(../img/bromba.png) 0 0, auto;
+}
+
 h1{
 	text-transform: uppercase;
 }
