@@ -5,6 +5,8 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import pl.fulara.model.User;
 import pl.fulara.model.UserRowMapper;
+import pl.fulara.servlet.utils.DataSourceManager;
+import pl.fulara.servlet.utils.ServletUtils;
 
 import javax.servlet.ServletContext;
 import javax.servlet.annotation.WebServlet;

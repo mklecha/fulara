@@ -3,6 +3,8 @@ package pl.fulara.servlet;
 import freemarker.template.TemplateException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import pl.fulara.model.*;
+import pl.fulara.servlet.utils.DataSourceManager;
+import pl.fulara.servlet.utils.ServletUtils;
 
 import javax.servlet.ServletContext;
 import javax.servlet.annotation.WebServlet;
@@ -80,7 +82,7 @@ public class GiftServlet extends HttpServlet {
         Gifts gifts;
         boolean logged;
 
-        public GiftPage(Gifts gifts, boolean logged) {
+        GiftPage(Gifts gifts, boolean logged) {
             this.gifts = gifts;
             this.logged = logged;
         }

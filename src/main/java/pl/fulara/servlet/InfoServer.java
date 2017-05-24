@@ -1,6 +1,9 @@
 package pl.fulara.servlet;
 
 import freemarker.template.TemplateException;
+import pl.fulara.model.Ftlable;
+import pl.fulara.servlet.utils.DataSourceManager;
+import pl.fulara.servlet.utils.ServletUtils;
 
 import javax.servlet.ServletContext;
 import javax.servlet.annotation.WebServlet;
@@ -27,7 +30,8 @@ public class InfoServer extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
         try {
-            String page = getPage();
+            InfoPage infoPage = new InfoPage(LoginServlet.isLoggedIn(request, response));
+            String page = getPage(infoPage);
             response.setCharacterEncoding("utf-8");
             response.getWriter().append(page).close();
         } catch (IOException | TemplateException e) {
@@ -35,8 +39,20 @@ public class InfoServer extends HttpServlet {
         }
     }
 
-    private String getPage() throws IOException, TemplateException {
-        return ServletUtils.runFreemaker(ftlTemplateDir, templateName, new HashMap<String, Object>() {
-        });
+    private String getPage(Ftlable data) throws IOException, TemplateException {
+        return ServletUtils.runFreemaker(ftlTemplateDir, templateName, data.toFtl());
+    }
+
+
+    class InfoPage extends Ftlable {
+        boolean isLogged;
+
+        InfoPage(boolean isLogged) {
+            this.isLogged = isLogged;
+        }
+
+        public boolean isLogged() {
+            return isLogged;
+        }
     }
 }

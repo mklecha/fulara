@@ -1,4 +1,4 @@
-package pl.fulara.servlet;
+package pl.fulara.servlet.utils;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -15,15 +15,15 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
-class ServletUtils {
-    final static String LOGIN_PARAM = "login";
-    final static String PASSWORD_PARAM = "password";
+public class ServletUtils {
+    public final static String LOGIN_PARAM = "login";
+    public final static String PASSWORD_PARAM = "password";
 
-	static boolean checkFields(Map<String, String[]> paramMap) {
+	public static boolean checkFields(Map<String, String[]> paramMap) {
         return paramMap.containsKey(LOGIN_PARAM) && paramMap.containsKey(PASSWORD_PARAM);
     }
 
-    static String runFreemaker(String templatesDir, String filePath, Map<String, Object> ftl) throws IOException, TemplateException {
+    public static String runFreemaker(String templatesDir, String filePath, Map<String, Object> ftl) throws IOException, TemplateException {
 		Configuration cfg = new Configuration(Configuration.VERSION_2_3_22);
 		cfg.setDirectoryForTemplateLoading(new File(templatesDir));
 		cfg.setDefaultEncoding("UTF-8");
@@ -32,7 +32,9 @@ class ServletUtils {
 		Map<String, Object> root = new HashMap<>();
 		root.put("content", ftl);
 
-		StringWriter writer = new StringWriter();
+        System.out.println(root);
+
+        StringWriter writer = new StringWriter();
  		template.process(root, writer);
 		return writer.toString();
 	}

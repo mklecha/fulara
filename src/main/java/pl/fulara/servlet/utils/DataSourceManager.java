@@ -1,4 +1,4 @@
-package pl.fulara.servlet;
+package pl.fulara.servlet.utils;
 
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
