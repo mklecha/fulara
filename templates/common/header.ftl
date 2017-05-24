@@ -1,5 +1,5 @@
 <!--suppress HtmlUnknownTarget -->
-<#macro header active>
+<#macro header active isLogged>
 	<!-- Navigation -->
 	<nav id="tf-menu" class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
@@ -21,7 +21,7 @@
                     <li <#if active == 'info'>class="active"</#if>><a href="info.html">Informacje</a></li>
                     <li <#if active == 'gifts'>class="active"</#if>><a href="gifts.html">Lista prezentów</a></li>
                     <li <#if active == 'contact'>class="active"</#if>><a href="contact.html">Kontakt</a></li>
-                    <li id="admin-panel" style="display: none"><a href="admin.html">Panel Administatora</a></li>
+                    <li id="admin-panel" <#if !isLogged>style="display: none"></#if><a href="admin.html">Panel Administatora</a></li>
                 </ul>
 			</div>
 		</div>

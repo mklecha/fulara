@@ -44,14 +44,14 @@ public class ContactServlet extends HttpServlet {
     }
 
     class ConcactPage extends Ftlable {
-        boolean isLogged;
+        boolean logged;
 
-        ConcactPage(boolean isLogged) {
-            this.isLogged = isLogged;
+        ConcactPage(boolean logged) {
+            this.logged = logged;
         }
 
         public boolean isLogged() {
-            return isLogged;
+            return logged;
         }
     }
 }

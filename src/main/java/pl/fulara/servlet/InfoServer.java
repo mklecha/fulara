@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.HashMap;
 
 @WebServlet(name = "info", urlPatterns = {"/info.html"})
 public class InfoServer extends HttpServlet {
@@ -45,14 +44,14 @@ public class InfoServer extends HttpServlet {
 
 
     class InfoPage extends Ftlable {
-        boolean isLogged;
+        boolean logged;
 
-        InfoPage(boolean isLogged) {
-            this.isLogged = isLogged;
+        InfoPage(boolean logged) {
+            this.logged = logged;
         }
 
         public boolean isLogged() {
-            return isLogged;
+            return logged;
         }
     }
 }
