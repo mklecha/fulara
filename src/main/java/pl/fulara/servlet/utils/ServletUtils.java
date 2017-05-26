@@ -19,24 +19,31 @@ public class ServletUtils {
     public final static String LOGIN_PARAM = "login";
     public final static String PASSWORD_PARAM = "password";
 
-	public static boolean checkFields(Map<String, String[]> paramMap) {
+    public static boolean checkFields(Map<String, String[]> paramMap) {
         return paramMap.containsKey(LOGIN_PARAM) && paramMap.containsKey(PASSWORD_PARAM);
     }
 
     public static String runFreemaker(String templatesDir, String filePath, Map<String, Object> ftl) throws IOException, TemplateException {
-		Configuration cfg = new Configuration(Configuration.VERSION_2_3_22);
-		cfg.setDirectoryForTemplateLoading(new File(templatesDir));
-		cfg.setDefaultEncoding("UTF-8");
-		cfg.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
-		Template template = cfg.getTemplate(filePath);
-		Map<String, Object> root = new HashMap<>();
-		root.put("content", ftl);
+        Configuration cfg = new Configuration(Configuration.VERSION_2_3_22);
+        cfg.setDirectoryForTemplateLoading(new File(templatesDir));
+        cfg.setDefaultEncoding("UTF-8");
+        cfg.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
+        Template template = cfg.getTemplate(filePath);
+        Map<String, Object> root = new HashMap<>();
+        root.put("content", ftl);
 
         System.out.println(root);
 
         StringWriter writer = new StringWriter();
- 		template.process(root, writer);
-		return writer.toString();
-	}
+        template.process(root, writer);
+        return writer.toString();
+    }
 
+    public static int getId(Map<String, String[]> map) {
+        return Integer.parseInt(map.get("id")[0]);
+    }
+
+    public static String getAction(Map<String, String[]> map) {
+        return map.get("action")[0];
+    }
 }

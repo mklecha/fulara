@@ -1,7 +1,8 @@
-package pl.fulara.servlet;
+package pl.fulara.servlet.admin;
 
 import freemarker.template.TemplateException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import pl.fulara.servlet.LoginServlet;
 import pl.fulara.servlet.utils.DataSourceManager;
 import pl.fulara.servlet.utils.ServletUtils;
 
@@ -35,11 +36,9 @@ public class UserServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
         HttpSession session = request.getSession(false);
         try {
-
             if(LoginServlet.requireLogged(request, response)){
                 return;
             }
-
             String login = (String) session.getAttribute(ServletUtils.LOGIN_PARAM);
             String page = getAdminPage(login);
             response.setCharacterEncoding("utf-8");

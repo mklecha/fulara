@@ -1,8 +1,12 @@
-package pl.fulara.servlet;
+package pl.fulara.servlet.admin;
 
 import freemarker.template.TemplateException;
 import org.springframework.jdbc.core.JdbcTemplate;
-import pl.fulara.model.*;
+import pl.fulara.model.Ftlable;
+import pl.fulara.model.Gift;
+import pl.fulara.model.GiftRowMapper;
+import pl.fulara.model.Gifts;
+import pl.fulara.servlet.LoginServlet;
 import pl.fulara.servlet.utils.DataSourceManager;
 import pl.fulara.servlet.utils.ServletUtils;
 
@@ -15,12 +19,12 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet(name = "gifts", urlPatterns = {"/gifts.html"})
+@WebServlet(name = "manageGifts", urlPatterns = {"/manage-gift.html"})
 public class GiftServlet extends HttpServlet {
 
     private JdbcTemplate jdbcTemplate;
     private String ftlTemplateDir;
-    private String templateName = "gifts.ftl";
+    private String templateName = "fragment\\gifts.ftl";
 
     @Override
     public void init() {
@@ -33,13 +37,28 @@ public class GiftServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
         try {
-            Gifts gifts = new Gifts(getGifts());
-            GiftPage giftPage = new GiftPage(gifts, LoginServlet.isLoggedIn(request, response));
-            String page = getPage(giftPage);
+            if (LoginServlet.requireLogged(request, response)) {
+                return;
+            }
+            makeAction(request.getParameterMap());
+            String page = getPage(new Gifts(getGifts()));
             response.setCharacterEncoding("utf-8");
             response.getWriter().append(page).close();
-        } catch (IOException | TemplateException e) {
+        } catch (TemplateException | IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    private void makeAction(Map<String, String[]> map) {
+        try {
+            String action = ServletUtils.getAction(map);
+            int id = ServletUtils.getId(map);
+            if (action.equals("changeReservation")) {
+                jdbcTemplate.update(Gift.CHANGE_RESERVARION, id);
+            } else if (action.equals("delete")) {
+                jdbcTemplate.update(Gift.DELETE_QUERY, id);
+            }
+        } catch (NullPointerException ignored) {
         }
     }
 
@@ -51,21 +70,5 @@ public class GiftServlet extends HttpServlet {
         return ServletUtils.runFreemaker(ftlTemplateDir, templateName, data.toFtl());
     }
 
-    class GiftPage extends Ftlable {
-        Gifts gifts;
-        boolean logged;
 
-        GiftPage(Gifts gifts, boolean logged) {
-            this.gifts = gifts;
-            this.logged = logged;
-        }
-
-        public Gifts getGifts() {
-            return gifts;
-        }
-
-        public boolean isLogged() {
-            return logged;
-        }
-    }
 }
