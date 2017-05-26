@@ -5,7 +5,7 @@
 <html lang="en">
 	<@head.head 'Prezenty - Maja i Jędrek'/>
 	<body>
-		<@header.header 'gifts'/>
+		<@header.header 'gifts' content.logged />
         <#assign showButton = content.logged />
 
 

@@ -5,7 +5,7 @@
 <html lang="en">
 	<@head.head 'Maja i Jędrek - strona ślubna'/>
 	<body>
-		<@header.header 'main'/>
+		<@header.header 'main' content.logged />
 
 
         <div style="margin-top: 100px;">

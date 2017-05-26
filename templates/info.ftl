@@ -5,7 +5,7 @@
 <html lang="en">
 	<@head.head 'Informacje - Maja i Jędrek'/>
 	<body>
-		<@header.header 'info'/>
+		<@header.header 'info' content.logged />
 
 
         <div style="margin-top: 100px;">

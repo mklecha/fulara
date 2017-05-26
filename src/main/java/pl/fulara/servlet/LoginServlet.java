@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-@WebServlet(name = "login", urlPatterns = {"/login.html"})
+@WebServlet(name = "login", urlPatterns = {"/login.html", "/logOut.html"})
 public class LoginServlet extends HttpServlet {
 
     private JdbcTemplate jdbcTemplate;
@@ -37,6 +37,16 @@ public class LoginServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
         HttpSession session = request.getSession(false);
+        if (request.getRequestURL().toString().contains("logOut") && session != null) {
+            session.invalidate();
+            try {
+                response.sendRedirect("index.html");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return;
+        }
+
         try {
             if (session != null) {
                 response.sendRedirect("admin.html");
@@ -75,14 +85,14 @@ public class LoginServlet extends HttpServlet {
 
     public static boolean requireLogged(HttpServletRequest request, HttpServletResponse response) throws IOException {
         HttpSession session = request.getSession(false);
-        if(session == null){
+        if (session == null) {
             response.sendRedirect("login.html");
             return true;
         }
         return false;
     }
 
-    public static boolean isLoggedIn(HttpServletRequest request, HttpServletResponse response){
+    public static boolean isLoggedIn(HttpServletRequest request, HttpServletResponse response) {
         HttpSession session = request.getSession(false);
         return session != null;
     }

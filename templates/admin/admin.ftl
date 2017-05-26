@@ -43,7 +43,7 @@
 					<li class="nav-li" id="nav-invitation"><a href="javascript:showTab('invitation');">Zaproszenia</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="javascript:logOut();">Wyloguj</a></li>
+					<li><a href="logOut.html">Wyloguj</a></li>
 				</ul>
 			</div>
 		</div>
