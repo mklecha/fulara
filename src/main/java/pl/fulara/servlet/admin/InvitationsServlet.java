@@ -2,10 +2,7 @@ package pl.fulara.servlet.admin;
 
 import freemarker.template.TemplateException;
 import org.springframework.jdbc.core.JdbcTemplate;
-import pl.fulara.model.Ftlable;
-import pl.fulara.model.Gift;
-import pl.fulara.model.GiftRowMapper;
-import pl.fulara.model.Gifts;
+import pl.fulara.model.*;
 import pl.fulara.servlet.LoginServlet;
 import pl.fulara.servlet.utils.DataSourceManager;
 import pl.fulara.servlet.utils.ServletUtils;
@@ -19,12 +16,12 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet(name = "manageGifts", urlPatterns = {"/manage-gifts.html"})
-public class GiftServlet extends HttpServlet {
+@WebServlet(name = "manageInvitations", urlPatterns = {"/manage-invitations.html"})
+public class InvitationsServlet extends HttpServlet {
 
     private JdbcTemplate jdbcTemplate;
     private String ftlTemplateDir;
-    private String templateName = "fragment\\gifts.ftl";
+    private String templateName = "fragment\\invitations.ftl";
 
     @Override
     public void init() {
@@ -41,7 +38,7 @@ public class GiftServlet extends HttpServlet {
                 return;
             }
             makeAction(request.getParameterMap());
-            String page = getPage(new Gifts(getGifts()));
+            String page = getPage(new Invitations(getInvitations()));
             response.setCharacterEncoding("utf-8");
             response.getWriter().append(page).close();
         } catch (TemplateException | IOException e) {
@@ -52,18 +49,19 @@ public class GiftServlet extends HttpServlet {
     private void makeAction(Map<String, String[]> map) {
         try {
             String action = ServletUtils.getAction(map);
-            int id = ServletUtils.getId(map);
-            if (action.equals("changeReservation")) {
+            if (action.equals("add")) {
+                String
                 jdbcTemplate.update(Gift.CHANGE_RESERVARION, id);
             } else if (action.equals("delete")) {
+                int id = ServletUtils.getId(map);
                 jdbcTemplate.update(Gift.DELETE_QUERY, id);
             }
         } catch (NullPointerException ignored) {
         }
     }
 
-    private List<Gift> getGifts() {
-        return jdbcTemplate.query(Gift.LIST_QUERY, new GiftRowMapper());
+    private List<Invitation> getInvitations() {
+        return jdbcTemplate.query(Invitation.LIST_QUERY, new InvitationRowMapper());
     }
 
     private String getPage(Ftlable data) throws IOException, TemplateException {

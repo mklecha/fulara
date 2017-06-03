@@ -4,7 +4,11 @@ import java.io.Serializable;
 
 public class Invitation extends Ftlable implements Serializable {
 
+
+    public static final String LIST_QUERY = "SELECT `key`, name, message, plural FROM invitation ORDER BY name";
+
     public static final String SINGLE_QUERY = "SELECT `key`, name, message, plural FROM invitation WHERE `key` = ?";
+
 
     private String key;
     private String name;
