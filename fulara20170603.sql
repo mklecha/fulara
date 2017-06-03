@@ -19,6 +19,9 @@
 -- Table structure for table `album`
 --
 
+CREATE DATABASE fulara;
+USE fulara;
+
 DROP TABLE IF EXISTS `album`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -159,3 +162,9 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2017-06-03 12:00:14
+
+
+CREATE USER 'fulara'@'localhost'
+  IDENTIFIED BY 'fulara123';
+
+GRANT DELETE, EXECUTE, INSERT, SELECT, SHOW VIEW, UPDATE ON fulara.* TO 'fulara'@'localhost';
