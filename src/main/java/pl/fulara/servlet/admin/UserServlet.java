@@ -2,6 +2,7 @@ package pl.fulara.servlet.admin;
 
 import freemarker.template.TemplateException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import pl.fulara.model.*;
 import pl.fulara.servlet.LoginServlet;
 import pl.fulara.servlet.utils.DataSourceManager;
 import pl.fulara.servlet.utils.ServletUtils;
@@ -14,8 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 @WebServlet(name = "admin", urlPatterns = {"/admin.html"})
 public class UserServlet extends HttpServlet {
@@ -39,11 +39,15 @@ public class UserServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
         HttpSession session = request.getSession(false);
         try {
-            if(LoginServlet.requireLogged(request, response)){
+            if (LoginServlet.requireLogged(request, response)) {
                 return;
             }
+
             String login = (String) session.getAttribute(ServletUtils.LOGIN_PARAM);
-            String page = getAdminPage(login);
+            Gifts gifts = new Gifts(getGifts());
+            Invitations invitations = new Invitations(getInvitations());
+            String page = getPage(new AdminPage(login, gifts, invitations));
+
             response.setCharacterEncoding("utf-8");
             response.getWriter().append(page).close();
         } catch (IOException | TemplateException e) {
@@ -51,10 +55,39 @@ public class UserServlet extends HttpServlet {
         }
     }
 
-    private String getAdminPage(String login) throws IOException, TemplateException {
-        Map<String, Object> data = new HashMap<>();
-        data.put("login", login);
-        return ServletUtils.runFreemaker(ftlTemplateDir, templateName, data);
+    private List<Gift> getGifts() {
+        return jdbcTemplate.query(Gift.LIST_QUERY, new GiftRowMapper());
     }
 
+    private List<Invitation> getInvitations() {
+        return jdbcTemplate.query(Invitation.LIST_QUERY, new InvitationRowMapper());
+    }
+
+    private String getPage(Ftlable data) throws IOException, TemplateException {
+        return ServletUtils.runFreemaker(ftlTemplateDir, templateName, data.toFtl());
+    }
+
+    class AdminPage extends Ftlable {
+        String login;
+        Gifts gifts;
+        Invitations invitations;
+
+        AdminPage(String login, Gifts gifts, Invitations invitations) {
+            this.login = login;
+            this.gifts = gifts;
+            this.invitations = invitations;
+        }
+
+        public String getLogin() {
+            return login;
+        }
+
+        public Gifts getGifts() {
+            return gifts;
+        }
+
+        public Invitations getInvitations() {
+            return invitations;
+        }
+    }
 }
