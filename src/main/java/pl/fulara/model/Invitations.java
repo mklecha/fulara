@@ -5,7 +5,7 @@ import java.util.List;
 public class Invitations extends Ftlable {
     private List<Invitation> invitations;
 
-    public Invitations(List<Invitation> gifts) {
+    public Invitations(List<Invitation> invitations) {
         this.invitations = invitations;
     }
 

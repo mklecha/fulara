@@ -7,12 +7,8 @@
 	<body>
 		<@navbar />
 
-		<div class="tab" id="gift">
-            <@gifts />
-		</div>
-		<div class="tab" id="invitation" hidden>
-            <@invitations />
-		</div>
+		<div class="tab" id="gift" hidden></div>
+		<div class="tab" id="invitation" hidden></div>
 		<@footer.footer />
     </body>
 </html>
@@ -44,16 +40,4 @@
 			</div>
 		</div>
 	</nav>
-</#macro>
-
-<#macro gifts>
-    <div class="container">
-        prezenty
-    </div>
-</#macro>
-
-<#macro invitations>
-    <div class="container">
-        zaproszenia
-    </div>
 </#macro>
