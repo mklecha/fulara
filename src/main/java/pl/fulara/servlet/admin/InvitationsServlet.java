@@ -50,11 +50,11 @@ public class InvitationsServlet extends HttpServlet {
         try {
             String action = ServletUtils.getAction(map);
             if (action.equals("add")) {
-                String
-                jdbcTemplate.update(Gift.CHANGE_RESERVARION, id);
+                Invitation invitation = ServletUtils.getInvitation(map);
+                jdbcTemplate.update(Invitation.INSERT_QUERY, invitation.getKey(), invitation.getName(), invitation.getMessage(), invitation.isPlural());
             } else if (action.equals("delete")) {
-                int id = ServletUtils.getId(map);
-                jdbcTemplate.update(Gift.DELETE_QUERY, id);
+                String key = ServletUtils.getKey(map);
+                jdbcTemplate.update(Invitation.DELETE_QUERY, key);
             }
         } catch (NullPointerException ignored) {
         }

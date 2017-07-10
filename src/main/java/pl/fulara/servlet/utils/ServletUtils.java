@@ -6,6 +6,7 @@ import freemarker.template.TemplateException;
 import freemarker.template.TemplateExceptionHandler;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.ResultSetExtractor;
+import pl.fulara.model.Invitation;
 
 import java.io.File;
 import java.io.IOException;
@@ -32,7 +33,7 @@ public class ServletUtils {
         Map<String, Object> root = new HashMap<>();
         root.put("content", ftl);
 
-        System.out.println(root);
+//        System.out.println(root);
 
         StringWriter writer = new StringWriter();
         template.process(root, writer);
@@ -45,5 +46,13 @@ public class ServletUtils {
 
     public static String getAction(Map<String, String[]> map) {
         return map.get("action")[0];
+    }
+
+    public static String getKey(Map<String, String[]> map) {
+        return map.get("key")[0];
+    }
+
+    public static Invitation getInvitation(Map<String, String[]> map) {
+        return null;
     }
 }

@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -31,11 +32,12 @@ public class LoginServlet extends HttpServlet {
         ServletContext context = getServletContext();
         DataSourceManager.init(getServletContext());
         jdbcTemplate = new JdbcTemplate(DataSourceManager.getDataSource());
-        ftlTemplateDir = context.getInitParameter("ftlTemplateDir") + "admin\\";
+        ftlTemplateDir = context.getInitParameter("ftlTemplateDir") + "admin"+ File.separator;
     }
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
+        System.out.println("jest w doget");
         HttpSession session = request.getSession(false);
         if (request.getRequestURL().toString().contains("logOut") && session != null) {
             session.invalidate();
@@ -62,6 +64,7 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        System.out.println("jest w dopost");
         Map<String, String[]> paramMap = request.getParameterMap();
         if (!ServletUtils.checkFields(paramMap))
             response.sendError(HttpServletResponse.SC_BAD_REQUEST);
@@ -69,8 +72,11 @@ public class LoginServlet extends HttpServlet {
         try {
             User user = getUser(paramMap);
             HttpSession session = request.getSession(true);
+            System.out.println("stworzył sesję");
             session.setAttribute(ServletUtils.LOGIN_PARAM, user.getLogin());
+            System.out.println("ustawił login: " + user.getLogin());
             response.sendRedirect("admin.html");
+            System.out.println("poleciał redirect");
         } catch (EmptyResultDataAccessException e) {
             try {
                 String page = getLoginPage("Niepoprawne dane logowania");

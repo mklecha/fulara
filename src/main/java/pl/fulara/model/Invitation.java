@@ -9,6 +9,10 @@ public class Invitation extends Ftlable implements Serializable {
 
     public static final String SINGLE_QUERY = "SELECT `key`, name, message, plural FROM invitation WHERE `key` = ?";
 
+    public static final String DELETE_QUERY = "DELETE FROM invitation WHERE `key` = ?";
+
+    public static final String INSERT_QUERY = "INSERT INTO invitation VALUES (?, ?, ?, ?)";
+
 
     private String key;
     private String name;
