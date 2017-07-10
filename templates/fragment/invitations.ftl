@@ -1,15 +1,53 @@
 <div class="container">
     <div class="panel panel-default">
-        <!-- Default panel contents -->
         <div class="panel-heading">Zaproszenia</div>
 
-        <!-- Table -->
         <table class="table">
-        <#list content.invitations as i>
             <tr>
-                <td>${i.key}</td>
+                <th width="15%">Klucz</th>
+                <th width="25%">Adresat</th>
+                <th width="40%">Link</th>
+                <th width="20%"></th>
             </tr>
-        </#list>
+
+            <#list content.invitations as i>
+                <tr>
+                    <td>${i.key}</td>
+                    <td>${i.name}</td>
+                    <td><a href="http://localhost:8080/fulary/${i.key}.inv">http://localhost:8080/fulary/${i.key}.inv</a>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger phase1" onclick="phase2();">Usuń
+                        </button>
+
+                        <button class="btn btn-warning phase2" style="display: none;" onclick="phase1();">Wróć
+                        </button>
+                        <button class="btn btn-danger phase2" style="display: none;" onclick="deleteInvitation('${i.key}');">
+                            Usuń
+                        </button>
+                    </td>
+                </tr>
+            </#list>
         </table>
+        <form class="form-group col-md-8 col-md-offset-2" method="get" action="manage-invitations.html" id="add-invitation-form">
+            <input type="hidden" name="action" value="add"/>
+            <div class="form-group">
+                <label for="key">Klucz:</label>
+                <input type="text" class="form-control" id="key" name="key">
+            </div>
+            <div class="form-group">
+                <label for="name">Adresat:</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="message">Nagłówek:</label>
+                <input type="text" class="form-control" id="message" name="message">
+            </div>
+            <input type="hidden" name="plural" id="plural-off" value="off" />
+            <div class="checkbox">
+                <label><input type="checkbox" name="plural" id="plural">Zaproszenie w do wielu osób (forma 'Was' zamiast 'Ciebie')</label>
+            </div>
+            <button type="submit" class="btn btn-default">Zapisz</button>
+        </form>
     </div>
 </div>

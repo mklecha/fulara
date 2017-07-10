@@ -53,6 +53,7 @@ public class ServletUtils {
     }
 
     public static Invitation getInvitation(Map<String, String[]> map) {
-        return null;
+        String plural = map.get("plural")[0];
+        return new Invitation(map.get("key")[0], map.get("name")[0], map.get("message")[0], plural.endsWith("on"));
     }
 }

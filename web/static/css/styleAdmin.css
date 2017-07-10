@@ -50,3 +50,11 @@ body {
 	padding: 15px;
 	margin: 0 auto;
 }
+
+.btn {
+	margin-top: 5px;
+}
+
+.reserved {
+	background: lightgray;
+}
