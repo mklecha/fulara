@@ -16,3 +16,11 @@ const activatePanel = function () {
     $('a').toggleClass('hidden-panel');
     $('#admin-panel').show();
 };
+
+jQuery(document).ready(function() {
+
+    /*
+     Wow
+     */
+    new WOW().init();
+});

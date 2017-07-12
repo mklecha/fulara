@@ -6,31 +6,29 @@
 	<@head.head 'Prezenty - Maja i Jędrek'/>
 	<body>
 		<@header.header 'gifts' content.logged />
-        <#assign showButton = content.logged />
-
-
         <div style="margin-top: 100px;">
             <h1>Lista prezentów</h1>
-            <#if content.gifts.gifts??>Jest lista</#if>
-            <#list content.gifts.gifts as gift>
-                <div>
-                    ${gift.id}. ${gift.name} - ${gift.photo}
-                    <#if showButton>
-                        <form method="post">
-                            <input type="text" name="id" value="${gift.id}" hidden />
-                            <button>
-                                <#if !gift.reserved>
-                                    Zarezerwuj
-                                <#else>
-                                    Anuluj rezerwację
-                                </#if>
-                            </button>
-                        </form>
-                    </#if>
+
+            <div class="container">
+            <#list  content.gifts.gifts as gift>
+                <div class="row gift-list">
+                    <div id="${gift.id}" class="col-sm-12 bg animated <#if gift?index%2 ==0>bg-even fadeInRight<#else>bg-odd fadeInLeft</#if>">
+                        <div class="col-sm-2" >
+                            <center><img src="static/img/gifts/${gift.photo}" alt=""/></center>
+                        </div>
+                        <div class="col-sm-8">
+                            <p class="gift-title">${gift.name}</p>
+                            <p class="gift-descr">${gift.description}</p>
+                            <#if gift.link?has_content> <a href="${gift.link}" target="_blank"><u>Przykład tutaj</u></a> </#if>
+                        </div>
+                        <#if gift.reserved>
+                            <div class="gift-reserved">ZAREZERWOWANE</div>
+                        </#if>
+                    </div>
                 </div>
-            <#else>
-                <div>Lista pusta</div>
             </#list>
+            </div>
+
         </div>
         <@footer.footer />
 

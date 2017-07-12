@@ -32,7 +32,8 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li class="nav-li active" id="nav-gift"><a href="javascript:showTab('gift');">Prezenty</a></li>
-					<li class="nav-li" id="nav-invitation"><a href="javascript:showTab('invitation');">Zaproszenia</a></li>
+                    <li class="nav-li" id="nav-invitation"><a href="javascript:showTab('invitation');">Zaproszenia</a></li>
+                    <li class="nav-li"><a href="./">Wróć do strony głównej</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="logOut.html">Wyloguj</a></li>

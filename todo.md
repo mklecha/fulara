@@ -1,4 +1,3 @@
-1. Ogarnąć do końca dodawanie zaproszeń
-2. front-end
-3. Ogarnąć błędy logowania na serwerze
-4. czy template da się po prostu wrzucić do roota?
+1. front-end
+    1. ściągnąć wow z klechowie
+2. Ogarnąć błędy logowania na serwerze
