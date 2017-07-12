@@ -27,6 +27,17 @@ $('.form-signin').submit(function (event) {
     $('#password').val(sha256(passwordPresend));
 });
 
+$(document).ready(function(){
+    let div = $('#gift').html();
+
+    if(div !== undefined && div.length === 0){
+        div = $('#invitation').html();
+        if(div !== undefined && div.length === 0){
+            showTab('gift');
+        }
+    }
+});
+
 function phase1() {
     $('.phase1').show();
     $('.phase2').hide();
@@ -59,4 +70,16 @@ function attachInvitation() {
             }
         });
     });
+}
+
+function changeReservation(id){
+    $.get(urls['gift'], {action: "changeReservation", id: id}, function (data) {
+        $('#gift').html(data);
+    })
+}
+
+function deleteGift(id) {
+    $.get(urls['gift'], {action: "delete", id: id}, function (data) {
+        $('#gift').html(data);
+    })
 }
