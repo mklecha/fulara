@@ -23,11 +23,11 @@
                         <button class="btn btn-default" onclick="changeReservation(${g.id});">Odrezerwuj</button></td>
                     </#if>
                 <td>
-                    <button class="btn btn-danger phase1" onclick="phase2();">Usuń</button>
+                    <button class="btn btn-danger phase1 p1-${g.id}" onclick="phase2(${g.id});">Usuń</button>
 
-                    <button class="btn btn-warning phase2" style="display: none;" onclick="phase1();">Wróć
+                    <button class="btn btn-warning phase2 p2-${g.id}" style="display: none;" onclick="phase1(${g.id});">Wróć
                     </button>
-                    <button class="btn btn-danger phase2" style="display: none;" onclick="deleteGift(${g.id});">
+                    <button class="btn btn-danger phase2 p2-${g.id}" style="display: none;" onclick="deleteGift(${g.id});">
                         Usuń
                     </button>
                 </td>

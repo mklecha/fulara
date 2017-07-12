@@ -17,12 +17,12 @@
                     <td><a href="http://localhost:8080/fulary/${i.key}.inv">http://localhost:8080/fulary/${i.key}.inv</a>
                     </td>
                     <td>
-                        <button class="btn btn-danger phase1" onclick="phase2();">Usuń
+                        <button class="btn btn-danger phase1 p1-${i.key}" onclick="phase2('${i.key}');">Usuń
                         </button>
 
-                        <button class="btn btn-warning phase2" style="display: none;" onclick="phase1();">Wróć
+                        <button class="btn btn-warning phase2 p2-${i.key}" style="display: none;" onclick="phase1('${i.key}');">Wróć
                         </button>
-                        <button class="btn btn-danger phase2" style="display: none;" onclick="deleteInvitation('${i.key}');">
+                        <button class="btn btn-danger phase2 p2-${i.key}" style="display: none;" onclick="deleteInvitation('${i.key}');">
                             Usuń
                         </button>
                     </td>
@@ -33,15 +33,15 @@
             <input type="hidden" name="action" value="add"/>
             <div class="form-group">
                 <label for="key">Klucz:</label>
-                <input type="text" class="form-control" id="key" name="key">
+                <input type="text" class="form-control" id="key" name="key" required>
             </div>
             <div class="form-group">
                 <label for="name">Adresat:</label>
-                <input type="text" class="form-control" id="name" name="name">
+                <input type="text" class="form-control" id="name" name="name" required>
             </div>
             <div class="form-group">
                 <label for="message">Nagłówek:</label>
-                <input type="text" class="form-control" id="message" name="message">
+                <input type="text" class="form-control" id="message" name="message" required>
             </div>
             <input type="hidden" name="plural" id="plural-off" value="off" />
             <div class="checkbox">

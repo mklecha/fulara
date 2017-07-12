@@ -38,14 +38,14 @@ $(document).ready(function(){
     }
 });
 
-function phase1() {
-    $('.phase1').show();
-    $('.phase2').hide();
+function phase1(id) {
+    $('.p1-'+id).show();
+    $('.p2-'+id).hide();
 }
 
-function phase2() {
-    $('.phase2').show();
-    $('.phase1').hide();
+function phase2(id) {
+    $('.p1-'+id).hide();
+    $('.p2-'+id).show();
 }
 
 function deleteInvitation(key) {
