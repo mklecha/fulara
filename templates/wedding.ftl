@@ -2,10 +2,10 @@
 <#import '/common/header.ftl' as header/>
 <#import '/common/footer.ftl' as footer/>
 <!DOCTYPE html>
-<html lang="en">
-	<@head.head 'Kontakt - Maja i Jędrek'/>
+<html lang="pl">
+	<@head.head 'Informacje - Maja i Jędrek'/>
 	<body>
-		<@header.header 'contact' content.logged/>
+		<@header.header 'info' content.logged />
 
 
         <!-- Intro Header -->
@@ -14,9 +14,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <h1 class="brand-heading">Kontakt</h1>
+                            <h1 class="brand-heading">Trochę informacji</h1>
                             <p class="intro-text">
-                                Póki co telefonicznie
+                                Niedługo uzupełnimy
                             </p>
                         <#--<a href="gifts.html" class="btn btn-circle page-scroll">-->
                         <#--<i class="fa fa-angle-double-down animated"></i>-->
@@ -27,7 +27,6 @@
             </div>
         </header>
 
-        <@footer.footer />
-
+		<@footer.footer />
     </body>
 </html>

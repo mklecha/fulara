@@ -1,0 +1,29 @@
+.hidden-panel {
+	cursor: url(../img/bromba.png) 0 0, auto;
+}
+
+.intro {
+	background-image:radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.88)),url('../img/1.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center top;
+}
+
+@media(max-width:500px) {
+	.intro {
+		background-image:radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.88)),url('../img/1sm.jpg');
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: bottom;
+	}
+}
+
+@media(max-width:350px) {
+	.intro {
+		background-position: top;
+	}
+}
+
+#about .fa {
+	font-size: 20px;
+}

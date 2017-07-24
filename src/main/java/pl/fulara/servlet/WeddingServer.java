@@ -12,11 +12,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "info", urlPatterns = {"/info.html"})
-public class InfoServer extends HttpServlet {
+@WebServlet(name = "wedding", urlPatterns = {"/wedding.html"})
+public class WeddingServer extends HttpServlet {
 
     private String ftlTemplateDir;
-    private String templateName = "info.ftl";
+    private String templateName = "wedding.ftl";
 
 
     @Override
@@ -29,8 +29,8 @@ public class InfoServer extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
         try {
-            InfoPage infoPage = new InfoPage(LoginServlet.isLoggedIn(request, response));
-            String page = getPage(infoPage);
+            WeddingPage weddingPage = new WeddingPage(LoginServlet.isLoggedIn(request, response));
+            String page = getPage(weddingPage);
             response.setCharacterEncoding("utf-8");
             response.getWriter().append(page).close();
         } catch (IOException | TemplateException e) {
@@ -43,10 +43,10 @@ public class InfoServer extends HttpServlet {
     }
 
 
-    class InfoPage extends Ftlable {
+    class WeddingPage extends Ftlable {
         boolean logged;
 
-        InfoPage(boolean logged) {
+        WeddingPage(boolean logged) {
             this.logged = logged;
         }
 
