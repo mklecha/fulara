@@ -13,14 +13,13 @@
 	.intro {
 		background-image:radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.88)),url('../img/1sm.jpg');
 		background-size: 100%;
-		background-repeat: no-repeat;
-		background-position: bottom;
+		background-position: top;
 	}
 }
 
 @media(max-width:350px) {
 	.intro {
-		background-position: top;
+		background-image:radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.88)),url('../img/1xs.jpg');
 	}
 }
 

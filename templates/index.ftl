@@ -12,7 +12,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <h1 class="brand-heading">CZEŚĆ, BIEŻEMY ŚLUB</h1>
+                            <h1 class="brand-heading">CZEŚĆ, BIERZEMY ŚLUB</h1>
                             <p class="intro-text">
                                 Maja i Jędrek
                             </p>
@@ -38,7 +38,7 @@
                             Buziaki od M i ściski od F
                         </p>
                         <p>
-                            <a href="#" class="btnghost"><i class="fa fa-info-circle"></i> Więcej informacji</a>
+                            <a href="wedding.html" class="btnghost"><i class="fa fa-info-circle"></i> Więcej informacji</a>
                         </p>
                     </div>
                 </div>

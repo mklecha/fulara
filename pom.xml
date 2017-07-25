@@ -34,7 +34,7 @@
                             </excludes>
                         </resource>
                         <resource>
-                            <directory>templates</directory>
+                            <directory>templates/</directory>
                         </resource>
                     </webResources>
                 </configuration>
