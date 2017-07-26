@@ -2,24 +2,39 @@
 	cursor: url(../img/bromba.png) 0 0, auto;
 }
 
-.intro {
-	background-image:radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.88)),url('../img/1.jpg');
+.intro .wedding{
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center top;
 }
 
+.intro {
+	background-image:radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.88)),url('../img/1.jpg');
+}
+
+.wedding{
+	background-image:radial-gradient(circle at 50% 50%,rgba(0,0,0,0.85),rgba(0,0,0,0.98)),url("../img/1.jpg");
+}
+
 @media(max-width:500px) {
-	.intro {
-		background-image:radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.88)),url('../img/1sm.jpg');
+	.intro .wedding{
 		background-size: 100%;
 		background-position: top;
+	}
+	.intro {
+		background-image:radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.88)),url('../img/1sm.jpg');
+	}
+	.wedding {
+		background-image:radial-gradient(circle at 50% 50%,rgba(0,0,0,0.85),rgba(0,0,0,0.98)),url("../img/1sm.jpg");
 	}
 }
 
 @media(max-width:350px) {
 	.intro {
 		background-image:radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.88)),url('../img/1xs.jpg');
+	}
+	.wedding {
+		background-image:radial-gradient(circle at 50% 50%,rgba(0,0,0,0.85),rgba(0,0,0,0.98)),url("../img/1xs.jpg");
 	}
 }
 

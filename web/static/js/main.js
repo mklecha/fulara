@@ -18,7 +18,6 @@ const activatePanel = function () {
 };
 
 jQuery(document).ready(function() {
-
     /* Wow */
     new WOW().init();
 });
