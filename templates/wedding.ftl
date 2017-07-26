@@ -14,7 +14,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <h1 class="brand-heading">Trochę informacji</h1>
+                            <h1 class="brand-heading wow fadeInDown">Trochę informacji</h1>
                             <p class="intro-text">
                                 Niedługo uzupełnimy
                             </p>
