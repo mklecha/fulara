@@ -51,6 +51,25 @@
     font-size: 20px;
 }
 
+.wedding a {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.white-background {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.wedding .btn-circle {
+    margin-bottom: 20px;
+}
+
+.map iframe{
+    width: 100%;
+    height: 500px;
+    border: 0;
+}
+
 #wedding-map .row {
     padding: 25px;
 }
@@ -74,16 +93,26 @@
     }
 }
 
-.white-background {
-    background: rgba(255, 255, 255, 0.1);
+.reception-text {
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
-.wedding .btn-circle {
-    margin-bottom: 20px;
+.reception-text a{
+    text-decoration: underline;
+    font-weight: bold;
 }
 
-.map iframe{
-    width: 100%;
-    height: 500px;
-    border: 0;
+footer {
+    margin:0;
+    font-size: 19px;
+}
+
+footer i {
+    font-size: 21px;
+}
+
+footer .bottom {
+    font-size: 17px;
+    margin-top: 10px;
 }

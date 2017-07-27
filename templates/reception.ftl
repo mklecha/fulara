@@ -37,9 +37,13 @@
                 <div class="container reception-text">
                     <h2>A jeżeli...</h2>
                     <p>
-                        Dla gości, którzy mają życzenie obdarować nas prezentem, a nie mają na niego pomysłu, przygotowaliśmy <a href="">listę prezentów.</a><br/>
-                        Gdyby ktoś pragnął zarezerwować którąś spośród wolnych pozycji na tej liście, prosimy zgłosić taką chęć do naszego świadka. Oczekuje na Wasze wiadomości mailowe pod adresem: <a href="mailto:dsaads">budsabudsa</a>
-                        Gdyby ktoś z jakichś przyczyn chciał się wycofać z podjętej wcześniej rezerwacji należy.../instrukcja obsługi/
+                        Dla gości, którzy mają życzenie obdarować nas prezentem, a nie mają na niego pomysłu, przygotowaliśmy <a href="gifts.html">listę prezentów.</a>
+                    </p>
+                    <p>
+                        Gdyby ktoś pragnął zarezerwować którąś spośród wolnych pozycji na tej liście, prosimy zgłosić taką chęć do naszego świadka - Janka. Skontakować się z nim można przez maila: <a href="mailto:jedrekimaja@gmail.com">jedrekimaja@gmail.com</a>
+                    </p>
+                    <p>
+                        Gdyby ktoś z jakichś przyczyn chciał się wycofać z podjętej wcześniej rezerwacji należy również dać znać Jankowi
                     </p>
                 </div>
                 <div>

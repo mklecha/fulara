@@ -5,7 +5,7 @@
 <html lang="en">
 	<@head.head 'Prezenty - Maja i Jędrek'/>
 	<body>
-		<@header.header 'gifts' content.logged />
+		<@header.header 'reception' content.logged />
         <div style="margin-top: 100px;">
             <h1>Lista prezentów</h1>
 
