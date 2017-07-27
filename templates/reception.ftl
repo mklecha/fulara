@@ -2,7 +2,7 @@
 <#import '/common/header.ftl' as header/>
 <#import '/common/footer.ftl' as footer/>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 	<@head.head 'Prezenty - Maja i Jędrek'/>
 	<body>
 		<@header.header 'reception' content.logged />
@@ -17,10 +17,10 @@
                             <p class="intro-text">
                                 Wesele rozpocznie się o godzinie 18.30 w przestrzeni “Marzycieli i Rzemieślników" znajdującej się na III piętrze Domu Towarowego Bracia Jabłkowscy, przy ul. Brackiej 25 w Warszawie.
                             </p>
-                            <p>
+                            <p class="intro-text">
                                 Plan dojazdu znajduje się <a href="#reception-map" class="page-scroll">poniżej.</a>
                             </p>
-                            <p>
+                            <p class="intro-text">
                                 Prosimy o potwierdzenie przybycia do 10 sierpnia.
                             </p>
                             <a href="#reception-map" class="btn btn-circle page-scroll">
@@ -40,10 +40,10 @@
                         Dla gości, którzy mają życzenie obdarować nas prezentem, a nie mają na niego pomysłu, przygotowaliśmy <a href="gifts.html">listę prezentów.</a>
                     </p>
                     <p>
-                        Gdyby ktoś pragnął zarezerwować którąś spośród wolnych pozycji na tej liście, prosimy zgłosić taką chęć do naszego świadka - Janka. Skontakować się z nim można przez maila: <a href="mailto:jedrekimaja@gmail.com">jedrekimaja@gmail.com</a>
+                        Gdyby ktoś pragnął zarezerwować którąś spośród wolnych pozycji na tej liście, prosimy zgłosić taką chęć do naszego świadka - <i>Janka</i>. Skontakować się z nim można przez maila: <a href="mailto:jedrekimaja@gmail.com">jedrekimaja@gmail.com</a>
                     </p>
                     <p>
-                        Gdyby ktoś z jakichś przyczyn chciał się wycofać z podjętej wcześniej rezerwacji należy również dać znać Jankowi
+                        Gdyby ktoś z jakichś przyczyn chciał się wycofać z podjętej wcześniej rezerwacji należy również dać znać <i>Jankowi</i>
                     </p>
                 </div>
                 <div>

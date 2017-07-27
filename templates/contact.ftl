@@ -2,25 +2,33 @@
 <#import '/common/header.ftl' as header/>
 <#import '/common/footer.ftl' as footer/>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 	<@head.head 'Kontakt - Maja i Jędrek'/>
 	<body>
 		<@header.header 'contact' content.logged/>
 
 
         <!-- Intro Header -->
-        <header class="intro">
+        <header class="wedding">
             <div class="intro-body">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
-                            <h1 class="brand-heading">Kontakt</h1>
+                    <div class="row margined">
+                        <div class="white-background">
+                            <h1 class="brand-heading">KONTAKT</h1>
                             <p class="intro-text">
-                                Póki co telefonicznie
+                                W razie wątpliwości zachęcamy do kontaktu drogą mailową (nasz świadek - <i>Janek</i> - odpowie na wszelkie pytania) lub telefoniczną.
                             </p>
-                        <#--<a href="gifts.html" class="btn btn-circle page-scroll">-->
-                        <#--<i class="fa fa-angle-double-down animated"></i>-->
-                        <#--</a>-->
+                            <div class="contact">
+                                <div class="col-md-6">
+                                    <i class="fa fa-phone animated"></i>Numer Mai: <a href="tel:793779060">793 779 060</a>
+                                </div>
+                                <div class="col-md-6">
+                                    <i class="fa fa-phone animated"></i>Numer Jędrka: <a href="tel:695954597">695 954 597</a>
+                                </div>
+                                <div>
+                                    <i class="fa fa-envelope animated bottom"></i>Adres mailowy: <a href="mailto:jedrekimaja@gmail.com">jedrekimaja@gmail.com</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

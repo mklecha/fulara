@@ -2,7 +2,7 @@
 <#import '/common/header.ftl' as header/>
 <#import '/common/footer.ftl' as footer/>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 	<@head.head 'Maja i Jędrek - strona ślubna'/>
 	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 		<@header.header 'main' content.logged />

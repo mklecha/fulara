@@ -2,7 +2,7 @@
 <#import '/common/header.ftl' as header/>
 <#import '/common/footer.ftl' as footer/>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 	<@head.head 'Prezenty - Maja i Jędrek'/>
 	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 		<@header.header 'reception' content.logged />

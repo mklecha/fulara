@@ -3,23 +3,36 @@
 <#import '/common/footer.ftl' as footer/>
 <!DOCTYPE html>
 <html lang="en">
-	<@head.head 'Zaproszenie - ${content.name}'/>
+
 	<#if content.plural>
         <#assign word ='Was'>
     <#else >
         <#assign word ='Cię'>
 	</#if>
+    <@head.head 'Zaproszenie - ${content.name}'/>
+
     <body>
-
-
-        <div style="margin-top: 100px;">
-            <h1>${content.message}</h1>
-            <div>
-                Zapraszamy ${word}
+        <!-- Intro Header -->
+        <header class="wedding">
+            <div class="intro-body">
+                <div class="container">
+                    <div class="row margined">
+                        <div class="white-background">
+                            <h1 class="brand-heading">${content.message}</h1>
+                            <p class="intro-text">
+                                Zapraszamy ${word} serdecznie! Wpadaj koniecznie
+                            </p>
+                            <p>
+                                <a href="./" class="btninv"><i class="fa fa-info-circle"></i> Więcej informacji</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <a href="./"><button>Przejdź do strony głównej</button></a>
-		<@footer.js />
+        </header>
+
+    <@footer.footer />
 
     </body>
 </html>
+

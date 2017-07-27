@@ -153,6 +153,38 @@
     font-size: 18px;
 }
 
+.contact {
+    font-size:20px;
+    font-weight:300;
+    letter-spacing:3px;
+}
+.contact a {
+    letter-spacing:0px;
+}
+
+.contact .bottom {
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+
+.btninv {
+    border:2px solid #eee;
+    background-color:transparent;
+    padding:15px 20px;
+    letter-spacing:3px;
+    font-size:12px;
+    text-transform:uppercase;
+    font-weight:400;
+    color:#eee;
+    margin-top:20px;
+    margin-bottom: 60px;
+    display:inline-block;
+}
+.btninv:hover {
+    background-color:#eee;
+    color:#333;
+    border:2px solid #eee;
+}
 
 footer {
     margin:0;
