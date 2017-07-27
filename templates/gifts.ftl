@@ -4,32 +4,42 @@
 <!DOCTYPE html>
 <html lang="en">
 	<@head.head 'Prezenty - Maja i Jędrek'/>
-	<body>
+	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 		<@header.header 'reception' content.logged />
-        <div style="margin-top: 100px;">
-            <h1>Lista prezentów</h1>
 
-            <div class="container">
-            <#list  content.gifts.gifts as gift>
-                <div class="row gift-list">
-                    <div id="${gift.id}" class="col-sm-12 bg animated <#if gift?index%2 ==0>bg-even fadeInRight<#else>bg-odd fadeInLeft</#if>">
-                        <div class="col-sm-2" >
-                            <center><img src="static/img/gifts/${gift.photo}" alt=""/></center>
+
+        <section id="gifts" class="wedding">
+
+            <div style="margin-top: 100px;">
+                <h1>Lista prezentów</h1>
+
+                <div class="container">
+                <#list content.gifts.gifts as gift>
+                    <div class="row gift-list">
+                        <div id="${gift.id}" class="col-sm-12 bg animated <#if gift?index%2 ==0>bg-even fadeInRight<#else>bg-odd fadeInLeft</#if>">
+                            <div class="col-sm-3 gift-title">
+                                ${gift.name}
+                            </div>
+                            <div class="col-sm-9 gift-descr">
+                                ${gift.description}<br/>
+                                <#if gift.link?has_content> <a href="${gift.link}" target="_blank"><u>Przykład tutaj</u></a> </#if>
+                            </div>
+                            <#if gift.reserved>
+                                <div class="gift-reserved">ZAREZERWOWANE</div>
+                            </#if>
                         </div>
-                        <div class="col-sm-8">
-                            <p class="gift-title">${gift.name}</p>
-                            <p class="gift-descr">${gift.description}</p>
-                            <#if gift.link?has_content> <a href="${gift.link}" target="_blank"><u>Przykład tutaj</u></a> </#if>
-                        </div>
-                        <#if gift.reserved>
-                            <div class="gift-reserved">ZAREZERWOWANE</div>
-                        </#if>
                     </div>
+                <#else>
+                    <div><h2>Jeszcze nic tu nie ma, ale zajrzyj niedługo, Maja z Jędrkiem pilnie pracują nad wypełnieniem tej listy!</h2></div>
+                </#list>
                 </div>
-            </#list>
-            </div>
 
-        </div>
+            </div>
+        </section>
+
+
+
+
         <@footer.footer />
 
     </body>
