@@ -23,5 +23,14 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="static/img/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="static/img/ico/144.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="static/img/ico/114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="static/img/ico/7.png">
+        <link rel="apple-touch-icon-precomposed" href="static/img/ico/57.png">
+
     </head>
 </#macro>

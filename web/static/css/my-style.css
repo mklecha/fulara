@@ -2,7 +2,12 @@
 	cursor: url(../img/bromba.png) 0 0, auto;
 }
 
-.intro .wedding{
+.intro{
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center top;
+}
+.wedding {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center top;
@@ -40,4 +45,21 @@
 
 #about .fa {
 	font-size: 20px;
+}
+
+#wedding-map .row{
+	padding: 25px;
+}
+
+#wedding-map .row .wedding-gifts {
+	margin-top: 150px;
+	padding-right: 40px;
+}
+
+@media(max-width: 990px){
+	#wedding-map .row .wedding-gifts {
+		margin-top: 20px;
+		padding-right: 0;
+		margin-bottom: 20px;
+	}
 }

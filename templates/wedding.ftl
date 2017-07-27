@@ -9,7 +9,7 @@
 
 
         <!-- Intro Header -->
-        <header class="wedding" style="">
+        <header class="wedding">
             <div class="intro-body">
                 <div class="container">
                     <div class="row" style="margin-top: 150px;">
@@ -19,11 +19,11 @@
                                 Serdecznie zapraszamy na <b>Mszę Świętą</b>,<br/>
                                 która odbędzie się 2 września o godzinie 15 <br/>
                                 w kościele św. Marcina przy ul. Piwnej 9/11 w Warszawie.<br/>
-                                Mapa znajduje się <a href="#map" class="page-scroll">tutaj.</a><br/><br/>
+                                Mapa znajduje się <a href="#wedding-map" class="page-scroll">poniżej.</a><br/><br/>
                                 Będziemy wdzięczni za modlitwę w naszej intencji.
 
                             </p>
-                            <a href="#map" class="btn btn-circle page-scroll">
+                            <a href="#wedding-map" class="btn btn-circle page-scroll" style="margin-bottom: 20px;">
                             <i class="fa fa-angle-double-down animated"></i>
                             </a>
                         </div>
@@ -31,41 +31,24 @@
                 </div>
             </div>
         </header>
-        <section id="contact">
-            <div class="container content-section text-center">
-                <div class="row">
-                   <div id="map" style="height: 400px; width: 100%;"></div>
+
+        <section id="wedding-map">
+            <div class="row text-center">
+                <div class="col-md-8">
+                    <h2>Mapa dojazdu do kościoła</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2442.7300267664273!2d21.010306715797377!3d52.24828717976362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc65f8125e1f%3A0xf5b6b53bcc09c38a!2sPiwna+9%2C+00-265+Warszawa!5e0!3m2!1spl!2spl!4v1501164645838"
+                            style="width: 100%; height: 500px;"frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="col-md-4 wedding-gifts">
+                    <h2>A jeżeli...</h2>
+                    <p>
+                        A jeżeli komuś przyjdzie ochota czymś nas obdarować, to miło nam będzie zamiast kwiatów otrzymać prezent zawarty w butelce, kopercie lub okładce:)
+                    </p>
                 </div>
             </div>
-        </section>
-        <section id="contact">
-            <div class="container content-section text-center">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <h2>A jeżeli...</h2>
-                        <p>
-                            A jeżeli komuś przyjdzie ochota czymś nas obdarować, to miło nam będzie zamiast kwiatów otrzymać prezent zawarty w butelce, kopercie lub okładce:)
-                        </p>
-                    </div>
-                </div>
             </div>
         </section>
 
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEuAg2YGuwUJIrFCWo6Ct8T_dZF_H05xM&callback=initMap"></script>
-
-        <script>
-            function initMap() {
-                var uluru = {lat: -25.363, lng: 131.044};
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 4,
-                    center: uluru
-                });
-                var marker = new google.maps.Marker({
-                    position: uluru,
-                    map: map
-                });
-            }
-        </script>
         <@footer.footer />
     </body>
 </html>
