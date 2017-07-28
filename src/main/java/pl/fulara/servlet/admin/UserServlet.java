@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -29,7 +30,7 @@ public class UserServlet extends HttpServlet {
         ServletContext context = getServletContext();
         DataSourceManager.init(getServletContext());
         jdbcTemplate = new JdbcTemplate(DataSourceManager.getDataSource());
-        ftlTemplateDir = context.getInitParameter("ftlTemplateDir") + "admin\\";
+        ftlTemplateDir = context.getInitParameter("ftlTemplateDir") + "admin" + File.separator;
     }
 
     @Override
