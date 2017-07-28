@@ -42,7 +42,7 @@ public class LoginServlet extends HttpServlet {
             c.setMaxAge(-1);
             try {
                 response.addCookie(c);
-                response.sendRedirect("index.html");
+                response.sendRedirect("./");
             } catch (IOException e) {
                 e.printStackTrace();
             }
