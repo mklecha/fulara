@@ -13,7 +13,7 @@
             <div class="intro-body">
                 <div class="container">
                     <div class="row margined">
-                        <div class="white-background">
+                        <div class="white-background wow fadeInUp">
                             <h1 class="brand-heading">KONTAKT</h1>
                             <p class="intro-text">
                                 W razie wątpliwości zachęcamy do kontaktu drogą mailową (nasz świadek - <i>Janek</i> - odpowie na wszelkie pytania) lub telefoniczną.

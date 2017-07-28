@@ -65,7 +65,7 @@
 }
 
 .map iframe{
-    width: 100%;
+    width: 98%;
     height: 500px;
     border: 0;
 }
@@ -109,8 +109,16 @@
     font-weight: bold;
 }
 
-/* GIFTLIST*/
+.go-to-gifts a{
+    font-size: 18px;
+}
 
+.go-to-gifts i{
+    font-size: 21px;
+}
+
+
+/* GIFTLIST*/
 .gift-list {
     text-align: left;
     font-size: 20px;

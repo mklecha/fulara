@@ -11,12 +11,12 @@
         <section id="gifts" class="wedding">
 
             <div style="margin-top: 100px;">
-                <h1>Lista prezentów</h1>
+                <h1 class="wow fadeInDown">Lista prezentów</h1>
 
                 <div class="container">
                 <#list content.gifts.gifts as gift>
                     <div class="row gift-list">
-                        <div id="${gift.id}" class="col-sm-12 bg animated <#if gift?index%2 ==0>bg-even fadeInRight<#else>bg-odd fadeInLeft</#if> margined-side">
+                        <div id="${gift.id}" class="col-sm-12 bg wow <#if gift?index%2 ==0>bg-even fadeInRight<#else>bg-odd fadeInLeft</#if> margined-side">
                             <div class="col-sm-3 gift-title">
                                 ${gift.name}
                             </div>

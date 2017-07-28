@@ -14,6 +14,8 @@
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="static/img/ico/7.png">
         <link rel="apple-touch-icon-precomposed" href="static/img/ico/57.png">
 
+        <title>Fulary.pl - Panel administratora</title>
+
     </head>
 
 </#macro>
