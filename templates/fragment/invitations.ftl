@@ -45,7 +45,7 @@
             </div>
             <input type="hidden" name="plural" id="plural-off" value="off" />
             <div class="checkbox">
-                <label><input type="checkbox" name="plural" id="plural">Zaproszenie w do wielu osób (forma 'Was' zamiast 'Ciebie')</label>
+                <label><input type="checkbox" name="plural" id="plural">Zaproszenie do wielu osób (forma 'Was' zamiast 'Ciebie')</label>
             </div>
             <button type="submit" class="btn btn-default">Zapisz</button>
         </form>
