@@ -16,7 +16,8 @@ import java.io.IOException;
 public class ReceptionServer extends HttpServlet {
 
     private String ftlTemplateDir;
-    private String templateName = "reception.ftl";
+    @SuppressWarnings("FieldCanBeLocal")
+    private final String templateName = "reception.ftl";
 
 
     @Override

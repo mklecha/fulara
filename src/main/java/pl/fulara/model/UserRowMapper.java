@@ -1,7 +1,6 @@
 package pl.fulara.model;
 
 import org.springframework.jdbc.core.RowMapper;
-import pl.fulara.model.User;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

@@ -16,7 +16,8 @@ import java.io.IOException;
 public class MainServlet extends HttpServlet {
 
     private String ftlTemplateDir;
-    private String templateName = "index.ftl";
+    @SuppressWarnings("FieldCanBeLocal")
+    private final String templateName = "index.ftl";
 
 
     @Override

@@ -2,7 +2,10 @@ package pl.fulara.servlet;
 
 import freemarker.template.TemplateException;
 import org.springframework.jdbc.core.JdbcTemplate;
-import pl.fulara.model.*;
+import pl.fulara.model.Ftlable;
+import pl.fulara.model.Gift;
+import pl.fulara.model.GiftRowMapper;
+import pl.fulara.model.Gifts;
 import pl.fulara.servlet.utils.DataSourceManager;
 import pl.fulara.servlet.utils.ServletUtils;
 
@@ -13,14 +16,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-import java.util.Map;
 
 @WebServlet(name = "gifts", urlPatterns = {"/gifts.html"})
 public class GiftServlet extends HttpServlet {
 
     private JdbcTemplate jdbcTemplate;
     private String ftlTemplateDir;
-    private String templateName = "gifts.ftl";
+    @SuppressWarnings("FieldCanBeLocal")
+    private final String templateName = "gifts.ftl";
 
     @Override
     public void init() {

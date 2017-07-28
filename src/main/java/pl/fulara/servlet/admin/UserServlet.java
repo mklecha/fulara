@@ -20,9 +20,11 @@ import java.util.Map;
 @WebServlet(name = "admin", urlPatterns = {"/admin.html"})
 public class UserServlet extends HttpServlet {
 
+    @SuppressWarnings("FieldCanBeLocal")
     private JdbcTemplate jdbcTemplate;
     private String ftlTemplateDir;
-    private String templateName = "admin.ftl";
+    @SuppressWarnings("FieldCanBeLocal")
+    private final String templateName = "admin.ftl";
 
 
     @Override

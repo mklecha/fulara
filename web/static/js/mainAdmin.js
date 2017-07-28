@@ -8,8 +8,9 @@ function showTab(id) {
         $('.tab').each(function () {
             $(this).hide();
         });
-        $('#' + id).html(data);
-        $('#' + id).show();
+        let tab = $('#' + id);
+        tab.html(data);
+        tab.show();
         $('.nav-li.active').toggleClass('active');
         $('#nav-' + id).toggleClass('active');
 

@@ -4,16 +4,12 @@ import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import freemarker.template.TemplateExceptionHandler;
-import org.springframework.dao.DataAccessException;
-import org.springframework.jdbc.core.ResultSetExtractor;
 import pl.fulara.model.Gift;
 import pl.fulara.model.Invitation;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.StringWriter;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 

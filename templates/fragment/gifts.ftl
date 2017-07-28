@@ -18,10 +18,11 @@
                 <td>${g.description}</td>
                 <td>
                     <#if !g.reserved>
-                        <button class="btn btn-primary" onclick="changeReservation(${g.id});">Zarezerwuj</button></td>
+                        <button class="btn btn-primary" onclick="changeReservation(${g.id});">Zarezerwuj</button>
                     <#else>
-                        <button class="btn btn-default" onclick="changeReservation(${g.id});">Odrezerwuj</button></td>
+                        <button class="btn btn-default" onclick="changeReservation(${g.id});">Odrezerwuj</button>
                     </#if>
+                </td>
                 <td>
                     <button class="btn btn-danger phase1 p1-${g.id}" onclick="phase2(${g.id});">Usuń</button>
 
@@ -34,11 +35,11 @@
             </tr>
         </#list>
         </table>
-        <form class="form-group col-md-8 col-md-offset-2" method="get" action="manage-gifts.html" id="add-gift-form">
+        <form class="form-group col-md-8 col-md-offset-2" action="manage-gifts.html" id="add-gift-form">
             <input type="hidden" name="action" value="add"/>
             <div class="form-group">
                 <label for="key">Nazwa:</label>
-                <input type="text" class="form-control" id="name" name="name" required>
+                <input class="form-control" id="name" name="name" required>
             </div>
             <div class="form-group">
                 <label for="description">Opis:</label>
@@ -50,9 +51,9 @@
                     W linku musi być nazwa protokołu: <i>http://</i> lub <i>https://</i><br/>
                     Poprawny link to na przykład: <i>http://www.google.pl</i>, a nie <i>www.google.pl</i>
                 </p>
-                <input type="text" class="form-control" id="link" name="link"/>
+                <input class="form-control" id="link" name="link"/>
             </div>
-            <button type="submit" class="btn btn-default">Dodaj</button>
+            <button class="btn btn-default">Dodaj</button>
         </form>
     </div>
 </div>

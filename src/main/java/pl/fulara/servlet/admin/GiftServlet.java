@@ -2,7 +2,10 @@ package pl.fulara.servlet.admin;
 
 import freemarker.template.TemplateException;
 import org.springframework.jdbc.core.JdbcTemplate;
-import pl.fulara.model.*;
+import pl.fulara.model.Ftlable;
+import pl.fulara.model.Gift;
+import pl.fulara.model.GiftRowMapper;
+import pl.fulara.model.Gifts;
 import pl.fulara.servlet.LoginServlet;
 import pl.fulara.servlet.utils.DataSourceManager;
 import pl.fulara.servlet.utils.ServletUtils;
@@ -22,7 +25,7 @@ public class GiftServlet extends HttpServlet {
 
     private JdbcTemplate jdbcTemplate;
     private String ftlTemplateDir;
-    private String templateName = "fragment" + File.separator + "gifts.ftl";
+    private final String templateName = "fragment" + File.separator + "gifts.ftl";
 
     @Override
     public void init() {

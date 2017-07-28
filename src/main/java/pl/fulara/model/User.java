@@ -2,7 +2,7 @@ package pl.fulara.model;
 
 public class User {
 
-	public static String LIST_USER_QUERY = "SELECT login FROM user WHERE login = binary ? AND password = binary ?";
+	public static final String LIST_USER_QUERY = "SELECT login FROM user WHERE login = binary ? AND password = binary ?";
 
 	private String login;
 

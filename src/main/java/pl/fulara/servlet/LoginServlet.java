@@ -21,7 +21,8 @@ public class LoginServlet extends HttpServlet {
 
     private JdbcTemplate jdbcTemplate;
     private String ftlTemplateDir;
-    private String templateName = "login.ftl";
+    @SuppressWarnings("FieldCanBeLocal")
+    private final String templateName = "login.ftl";
 
 
     @Override

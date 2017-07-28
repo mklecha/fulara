@@ -3,7 +3,9 @@ package pl.fulara.servlet;
 import freemarker.template.TemplateException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
-import pl.fulara.model.*;
+import pl.fulara.model.Ftlable;
+import pl.fulara.model.Invitation;
+import pl.fulara.model.InvitationRowMapper;
 import pl.fulara.servlet.utils.DataSourceManager;
 import pl.fulara.servlet.utils.ServletUtils;
 
@@ -19,7 +21,8 @@ public class InvitationServlet extends HttpServlet {
 
     private JdbcTemplate jdbcTemplate;
     private String ftlTemplateDir;
-    private String templateName = "invitation.ftl";
+    @SuppressWarnings("FieldCanBeLocal")
+    private final String templateName = "invitation.ftl";
 
 
     @Override
