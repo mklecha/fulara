@@ -5,7 +5,8 @@
         <table class="table">
             <tr>
                 <th width="5%">Id</th>
-                <th width="25%">Nazwa</th>
+                <th width="15%">Nazwa</th>
+                <th width="10%">Link</th>
                 <th width="45%">Opis</th>
                 <th width="10%"></th>
                 <th width="15%"></th>
@@ -15,9 +16,14 @@
             <tr <#if g.reserved>class="reserved"</#if>>
                 <td>${g.id}</td>
                 <td>${g.name}</td>
+                <td>
+                    <#if g.link?has_content>
+                        <a href="${g.link}">${g.link}</a>
+                    </#if>
+                </td>
                 <td>${g.description}</td>
                 <td>
-                    <#if !g.reserved>
+                <#if !g.reserved>
                         <button class="btn btn-primary" onclick="changeReservation(${g.id});">Zarezerwuj</button>
                     <#else>
                         <button class="btn btn-default" onclick="changeReservation(${g.id});">Odrezerwuj</button>
