@@ -58,3 +58,10 @@ body {
 .reserved {
 	background: lightgray;
 }
+
+.link-error {
+	display: none;
+	color: red;
+	font-size: 15px;
+	font-weight: bold;
+}

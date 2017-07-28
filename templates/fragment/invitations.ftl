@@ -14,7 +14,7 @@
                 <tr>
                     <td>${i.key}</td>
                     <td>${i.name}</td>
-                    <td><a href="http://localhost:8080/fulary/${i.key}.inv">http://localhost:8080/fulary/${i.key}.inv</a>
+                    <td><a href="http://localhost:8080/fulary/${i.key}.inv">http://www.fulary.pl/${i.key}.inv</a>
                     </td>
                     <td>
                         <button class="btn btn-danger phase1 p1-${i.key}" onclick="phase2('${i.key}');">Usuń

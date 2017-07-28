@@ -6,11 +6,14 @@ public class Gift extends Ftlable implements Serializable {
 
     private static final String defaultPhoto = "deafult.jpg";
 
-    public static final String LIST_QUERY = "SELECT id, name, descr, link, photo, reserved FROM gift ORDER BY reserved, id";
+    public static final String LIST_QUERY = "SELECT id, name, descr, link, photo, reserved FROM gift ORDER BY reserved, id;";
+
+    public static final String INSERT_QUERY = "INSERT INTO gift(name, descr, link) VALUES (?, ?, ?);";
 
     public static final String CHANGE_RESERVARION = "UPDATE gift SET reserved = NOT reserved WHERE id = ?;";
 
-    public static final String DELETE_QUERY = "DELETE FROM gift WHERE id = ?";
+    public static final String DELETE_QUERY = "DELETE FROM gift WHERE id = ?;";
+
 
     private int id;
     private String name;
@@ -43,6 +46,13 @@ public class Gift extends Ftlable implements Serializable {
             this.photo = photo;
         }
         this.reserved = reserved != 0;
+    }
+
+    public Gift(String name, String description, String link) {
+        super();
+        this.name = name;
+        this.description = description;
+        this.link = link;
     }
 
     public int getId() {

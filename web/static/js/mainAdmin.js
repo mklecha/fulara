@@ -16,7 +16,7 @@ function showTab(id) {
         if (id === 'invitation') {
             attachInvitation();
         } else if (id === 'gift') {
-
+            attachGift();
         }
     });
 }
@@ -75,11 +75,32 @@ function attachInvitation() {
 function changeReservation(id){
     $.get(urls['gift'], {action: "changeReservation", id: id}, function (data) {
         $('#gift').html(data);
+        attachGift();
     })
 }
 
 function deleteGift(id) {
     $.get(urls['gift'], {action: "delete", id: id}, function (data) {
         $('#gift').html(data);
+        attachGift();
     })
+}
+
+function attachGift() {
+    $('#add-gift-form').submit(function (event) {
+        event.preventDefault();
+        let link = $('#link').val();
+        if(link.length > 0 && !link.startsWith('http')){
+            $('.link-error').show();
+            return;
+        }
+        $.ajax({
+            url: urls['gift'],
+            data: $(this).serialize(),
+            success: function (data) {
+                $('#gift').html(data);
+                attachGift();
+            }
+        });
+    });
 }

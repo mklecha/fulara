@@ -2,7 +2,7 @@
 <#import '/common/header.ftl' as header/>
 <#import '/common/footer.ftl' as footer/>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 	<#if content.plural>
         <#assign word ='Was'>

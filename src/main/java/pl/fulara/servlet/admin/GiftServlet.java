@@ -2,10 +2,7 @@ package pl.fulara.servlet.admin;
 
 import freemarker.template.TemplateException;
 import org.springframework.jdbc.core.JdbcTemplate;
-import pl.fulara.model.Ftlable;
-import pl.fulara.model.Gift;
-import pl.fulara.model.GiftRowMapper;
-import pl.fulara.model.Gifts;
+import pl.fulara.model.*;
 import pl.fulara.servlet.LoginServlet;
 import pl.fulara.servlet.utils.DataSourceManager;
 import pl.fulara.servlet.utils.ServletUtils;
@@ -53,11 +50,16 @@ public class GiftServlet extends HttpServlet {
     private void makeAction(Map<String, String[]> map) {
         try {
             String action = ServletUtils.getAction(map);
-            int id = ServletUtils.getId(map);
-            if (action.equals("changeReservation")) {
-                jdbcTemplate.update(Gift.CHANGE_RESERVARION, id);
-            } else if (action.equals("delete")) {
-                jdbcTemplate.update(Gift.DELETE_QUERY, id);
+            if (action.equals("add")) {
+                Gift gift = ServletUtils.getGift(map);
+                jdbcTemplate.update(Gift.INSERT_QUERY, gift.getName(), gift.getDescription(), gift.getLink());
+            } else {
+                int id = ServletUtils.getId(map);
+                if (action.equals("changeReservation")) {
+                    jdbcTemplate.update(Gift.CHANGE_RESERVARION, id);
+                } else if (action.equals("delete")) {
+                    jdbcTemplate.update(Gift.DELETE_QUERY, id);
+                }
             }
         } catch (NullPointerException ignored) {
         }

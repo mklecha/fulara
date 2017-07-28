@@ -1,7 +1,10 @@
-1. Ogarnąć błędy logowania na serwerze
-2. Minimalizacja js
-3. Skończyć podstrony
-4. Zalinkować prezenty
-5. Wywalić stare prezenty
-6. Zrobić mechanizm do dodawania prezentów
-7. Urozmaicić zdjęcia
+1. Minimalizacja js
+2. Zrobić mechanizm do dodawania prezentów
+3. Marginesy przy tekstach
+4. favicon w adminie
+
+Uwagi
+
+1. Przydałoby się napisać jak potwierdzać (telefonicznie, mailowo)
+2. Hasła
+

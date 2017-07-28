@@ -34,5 +34,25 @@
             </tr>
         </#list>
         </table>
+        <form class="form-group col-md-8 col-md-offset-2" method="get" action="manage-gifts.html" id="add-gift-form">
+            <input type="hidden" name="action" value="add"/>
+            <div class="form-group">
+                <label for="key">Nazwa:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Opis:</label>
+                <textarea class="form-control" id="description" name="description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="link">Link:</label>
+                <p class="link-error">
+                    W linku musi być nazwa protokołu: <i>http://</i> lub <i>https://</i><br/>
+                    Poprawny link to na przykład: <i>http://www.google.pl</i>, a nie <i>www.google.pl</i>
+                </p>
+                <input type="text" class="form-control" id="link" name="link"/>
+            </div>
+            <button type="submit" class="btn btn-default">Dodaj</button>
+        </form>
     </div>
 </div>
