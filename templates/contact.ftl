@@ -25,8 +25,8 @@
                                 <div class="col-md-6">
                                     <i class="fa fa-phone animated"></i>Numer Jędrka: <a href="tel:695954597">695 954 597</a>
                                 </div>
-                                <div>
-                                    <i class="fa fa-envelope animated bottom"></i>Adres mailowy: <a href="mailto:jedrekimaja@gmail.com">jedrekimaja@gmail.com</a>
+                                <div class="bottom">
+                                    <i class="fa fa-envelope"></i>Adres mailowy: <a href="mailto:jedrekimaja@gmail.com">jedrekimaja@gmail.com</a>
                                 </div>
                             </div>
                         </div>

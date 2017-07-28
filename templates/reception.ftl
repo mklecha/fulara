@@ -15,7 +15,7 @@
                         <div class="col-md-8 col-md-offset-2 white-background wow fadeInDown">
                             <h1 class="brand-heading">WESELE</h1>
                             <p class="intro-text">
-                                Wesele rozpocznie się o godzinie 18.30 w przestrzeni “Marzycieli i Rzemieślników" znajdującej się na III piętrze Domu Towarowego Bracia Jabłkowscy, przy ul. Brackiej 25 w Warszawie.
+                                Wesele rozpocznie się o godzinie 18.30 w przestrzeni “Marzycieli i Rzemieślników" znajdującej się na III piętrze Domu Towarowego Bracia Jabłkowscy, przy ul. Brackiej 25 w&nbsp;Warszawie.
                             </p>
                             <p class="intro-text">
                                 Plan dojazdu znajduje się <a href="#reception-map" class="page-scroll">poniżej.</a>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="wow fadeInRight">
                     <h2>Mapa dojazdu na salę weselną</h2>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.6196406673985!2d21.01307731580131!3d52.2321278797607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471eccf46e7d5489%3A0x543bc68b6e7182eb!2sBracka+25%2C+Warszawa!5e0!3m2!1spl!2spl!4v1501172863155"
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d863.9483614076539!2d21.014412032187852!3d52.23221255107104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471eccf46e60f2af%3A0x32a4ecd77712044d!2sMarzyciele+i+Rzemie%C5%9Blnicy.+Dom+Innowacji+Spo%C5%82ecznych.!5e0!3m2!1spl!2spl!4v1501245283580"
                             frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>

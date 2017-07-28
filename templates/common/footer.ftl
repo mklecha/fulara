@@ -15,7 +15,7 @@
                 Adres mailowy: <a href="mailto:jedrekimaja@gmail.com">jedrekimaja@gmail.com</a>
             </div>
             <div class="col-sm-12 bottom">
-                Stronę popełnił Michał Klecha<br/>
+                Autor strony: Michał Klecha<br/>
                 Kontakt: <a href="mailto:michalklecha.0@gmail.com">michalklecha.0@gmail.com</a>
             </div>
         </div>

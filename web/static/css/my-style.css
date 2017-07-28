@@ -156,6 +156,12 @@
     border: black solid 2px;
 }
 
+@media (max-width: 500px) {
+    .gift-reserved {
+        font-size: 25px;
+    }
+}
+
 .gift-title {
     color: #969696;
     font-weight:bold;
@@ -176,8 +182,10 @@
     letter-spacing:0;
 }
 
-.contact .bottom {
+.contact .bottom i {
     margin-top: 20px;
+}
+.contact .bottom{
     padding-bottom: 40px;
 }
 
