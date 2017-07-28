@@ -92,6 +92,12 @@
         margin-top: 150px;
     }
 }
+@media (max-width: 768px) {
+    .margined-side {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
 
 .reception-text {
     margin-top: 40px;

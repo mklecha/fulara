@@ -34,7 +34,7 @@
 
         <section id="reception-map" class="map">
             <div class="row text-center">
-                <div class="container reception-text">
+                <div class="container reception-text margined-side">
                     <h2>A jeżeli...</h2>
                     <p>
                         Dla gości, którzy mają życzenie obdarować nas prezentem, a nie mają na niego pomysłu, przygotowaliśmy <a href="gifts.html">listę prezentów.</a>
