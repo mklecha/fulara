@@ -10,10 +10,7 @@ import pl.fulara.servlet.utils.ServletUtils;
 
 import javax.servlet.ServletContext;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
@@ -37,11 +34,13 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
-        System.out.println("jest w doget");
         HttpSession session = request.getSession(false);
         if (request.getRequestURL().toString().contains("logOut") && session != null) {
             session.invalidate();
+            Cookie c = new Cookie("JSESSIONID", "");
+            c.setMaxAge(-1);
             try {
+                response.addCookie(c);
                 response.sendRedirect("index.html");
             } catch (IOException e) {
                 e.printStackTrace();
@@ -64,19 +63,17 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        System.out.println("jest w dopost");
         Map<String, String[]> paramMap = request.getParameterMap();
-        if (!ServletUtils.checkFields(paramMap))
+        if (!ServletUtils.checkFields(paramMap)) {
             response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+        }
 
         try {
             User user = getUser(paramMap);
             HttpSession session = request.getSession(true);
-            System.out.println("stworzył sesję");
             session.setAttribute(ServletUtils.LOGIN_PARAM, user.getLogin());
-            System.out.println("ustawił login: " + user.getLogin());
+            response.addCookie(new Cookie("JSESSIONID", session.getId()));
             response.sendRedirect("admin.html");
-            System.out.println("poleciał redirect");
         } catch (EmptyResultDataAccessException e) {
             try {
                 String page = getLoginPage("Niepoprawne dane logowania");

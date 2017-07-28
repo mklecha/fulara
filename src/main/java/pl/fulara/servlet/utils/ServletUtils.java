@@ -33,8 +33,6 @@ public class ServletUtils {
         Map<String, Object> root = new HashMap<>();
         root.put("content", ftl);
 
-        System.out.println(root);
-
         StringWriter writer = new StringWriter();
         template.process(root, writer);
         return writer.toString();
