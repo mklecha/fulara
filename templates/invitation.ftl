@@ -6,8 +6,10 @@
 
 	<#if content.plural>
         <#assign word ='Was'>
-    <#else >
+        <#assign word2 ='Wpadajcie'>
+    <#else>
         <#assign word ='Cię'>
+        <#assign word2 ='Wpadaj'>
 	</#if>
     <@head.head 'Zaproszenie - ${content.name}'/>
 
@@ -20,7 +22,7 @@
                         <div class="white-background">
                             <h1 class="brand-heading">${content.message}</h1>
                             <p class="intro-text">
-                                Zapraszamy ${word} serdecznie! Wpadaj koniecznie
+                                Zapraszamy ${word} serdecznie! ${word2} koniecznie
                             </p>
                             <p>
                                 <a href="./" class="btninv"><i class="fa fa-info-circle"></i> Więcej informacji</a>

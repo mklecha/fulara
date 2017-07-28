@@ -17,10 +17,10 @@
                 <#list content.gifts.gifts as gift>
                     <div class="row gift-list">
                         <div id="${gift.id}" class="col-sm-12 bg wow <#if gift?index%2 ==0>bg-even fadeInRight<#else>bg-odd fadeInLeft</#if> margined-side">
-                            <div class="col-sm-3 gift-title">
+                            <div class="col-sm-4 col-md-3 gift-title">
                                 ${gift.name}
                             </div>
-                            <div class="col-sm-9 gift-descr">
+                            <div class="col-sm-8 col-md-9 gift-descr">
                                 ${gift.description}<br/>
                                 <#if gift.link?has_content> <a href="${gift.link}" target="_blank"><u>Przykład tutaj</u></a> </#if>
                             </div>
