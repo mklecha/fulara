@@ -64,7 +64,7 @@
     margin-bottom: 20px;
 }
 
-.map iframe{
+.map iframe {
     width: 98%;
     height: 500px;
     border: 0;
@@ -77,6 +77,11 @@
 #wedding-map .row .wedding-gifts {
     margin-top: 150px;
     padding-right: 40px;
+}
+
+.mustache {
+    border: black solid 3px;
+    cursor: pointer;
 }
 
 @media (max-width: 990px) {
@@ -92,10 +97,16 @@
         margin-top: 150px;
     }
 }
+
 @media (max-width: 768px) {
     .margined-side {
         margin-left: 20px;
         margin-right: 20px;
+    }
+
+    .margined-top-bottom {
+        margin-top: 80px;
+        margin-bottom: 80px;
     }
 }
 
@@ -104,19 +115,18 @@
     margin-bottom: 40px;
 }
 
-.reception-text a{
+.reception-text a {
     text-decoration: underline;
     font-weight: bold;
 }
 
-.go-to-gifts a{
+.go-to-gifts a {
     font-size: 18px;
 }
 
-.go-to-gifts i{
+.go-to-gifts i {
     font-size: 21px;
 }
-
 
 /* GIFTLIST*/
 .gift-list {
@@ -141,18 +151,19 @@
 }
 
 .gift-reserved {
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Droid Sans', sans-serif;
     font-size: 35px;
-    font-weight:bold;color: #AAAAAA;
+    font-weight: bold;
+    color: #AAAAAA;
     border: black solid 2px;
 }
 
@@ -164,7 +175,7 @@
 
 .gift-title {
     color: #969696;
-    font-weight:bold;
+    font-weight: bold;
     font-size: 25px;
 }
 
@@ -174,42 +185,45 @@
 }
 
 .contact {
-    font-size:20px;
-    font-weight:300;
-    letter-spacing:3px;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 3px;
 }
+
 .contact a {
-    letter-spacing:0;
+    letter-spacing: 0;
 }
 
 .contact .bottom i {
     margin-top: 20px;
 }
-.contact .bottom{
+
+.contact .bottom {
     padding-bottom: 40px;
 }
 
 .btninv {
-    border:2px solid #eee;
-    background-color:transparent;
-    padding:15px 20px;
-    letter-spacing:3px;
-    font-size:12px;
-    text-transform:uppercase;
-    font-weight:400;
-    color:#eee;
-    margin-top:20px;
+    border: 2px solid #eee;
+    background-color: transparent;
+    padding: 15px 20px;
+    letter-spacing: 3px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #eee;
+    margin-top: 20px;
     margin-bottom: 60px;
-    display:inline-block;
+    display: inline-block;
 }
+
 .btninv:hover {
-    background-color:#eee;
-    color:#333;
-    border:2px solid #eee;
+    background-color: #eee;
+    color: #333;
+    border: 2px solid #eee;
 }
 
 footer {
-    margin:0;
+    margin: 0;
     font-size: 19px;
 }
 
@@ -221,6 +235,7 @@ footer .bottom {
     font-size: 17px;
     margin-top: 10px;
 }
+
 footer a {
-    font-weight:bold;
+    font-weight: bold;
 }
