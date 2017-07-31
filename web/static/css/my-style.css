@@ -91,6 +91,9 @@
     .margined {
         margin-top: 150px;
     }
+    .wedding .margined {
+        margin-bottom: 100px;
+    }
 }
 
 @media (max-width: 768px) {
