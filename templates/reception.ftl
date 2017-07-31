@@ -49,7 +49,7 @@
                         <a href="gifts.html" class="btnghost"><i class="fa fa-gift"></i>Przejdź do listy prezentów</a>
                     </p>
                     <p>
-                        Aby rozwiązać odwieczny problem weselnych strojów, zachęcamy do angażownia się w obowiązującą konwencję: "złoto" lub "wąsy". Planujemy wyłonić i nagrodzić osoby w najlepszych strojach.
+                        Aby rozwiązać odwieczny problem weselnych strojów, zachęcamy do angażownia się w obowiązującą konwencję: <b><i>złoto</i></b> lub <b><i>wąsy</i></b>. Planujemy wyłonić i nagrodzić osoby w najlepszych strojach.
                     </p>
                 </div>
                 <div class="wow fadeInRight">
