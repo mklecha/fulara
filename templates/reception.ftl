@@ -48,19 +48,9 @@
                     <p class="go-to-gifts">
                         <a href="gifts.html" class="btnghost"><i class="fa fa-gift"></i>Przejdź do listy prezentów</a>
                     </p>
-                </div>
-                <div class="container reception-text margined-side margined-top-bottom wow fadeInLeft">
-                    <h3>Co tu robią wąsy?!</h3>
-                    <h4 class="must1">Kliknij, żeby się dowiedzieć</h4>
-                    <div id="must1" class="col-md-12 must1">
-                        <img class="mustache" src="static/img/must.jpg"/>
-                    </div>
-                    <p class="col-md-7 must2" style="display: none;">
-                        Mamy pewien pomysł, podzielimy się nim z Wami niedługo. A tymczasem pozostawimy Was w niepewności ;)
+                    <p>
+                        Aby rozwiązać odwieczny problem weselnych strojów, zachęcamy do angażownia się w obowiązującą konwencję: "złoto" lub "wąsy". Planujemy wyłonić i nagrodzić osoby w najlepszych strojach.
                     </p>
-                    <div id="must2" class="col-md-5 must2" style="display: none;">
-                        <img class="mustache" src="static/img/must.jpg"/>
-                    </div>
                 </div>
                 <div class="wow fadeInRight">
                     <h2>Mapa dojazdu do sali weselnej</h2>

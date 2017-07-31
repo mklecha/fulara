@@ -79,11 +79,6 @@
     padding-right: 40px;
 }
 
-.mustache {
-    border: black solid 3px;
-    cursor: pointer;
-}
-
 @media (max-width: 990px) {
     #wedding-map .row .wedding-gifts {
         margin-top: 20px;
@@ -102,11 +97,6 @@
     .margined-side {
         margin-left: 20px;
         margin-right: 20px;
-    }
-
-    .margined-top-bottom {
-        margin-top: 80px;
-        margin-bottom: 80px;
     }
 }
 

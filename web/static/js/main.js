@@ -20,16 +20,6 @@ const activatePanel = function () {
 jQuery(document).ready(function() {
     /* Wow */
     new WOW().init();
-
-    $("#must1").click(function () {
-        $(".must1").hide();
-        $(".must2").show();
-    });
-
-    $("#must2").click(function () {
-        $(".must2").hide();
-        $(".must1").show();
-    });
 });
 
 // jQuery to collapse the navbar on scroll
