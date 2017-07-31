@@ -20,11 +20,11 @@
                             <p class="intro-text">
                                 Plan dojazdu znajduje się <a href="#reception-map" class="page-scroll">poniżej.</a>
                             </p>
-                            <p class="intro-text">
-                                Prosimy o potwierdzenie przybycia do 10 sierpnia, drogą mailową - na adres <a href="mailto:jedrekimaja@gmail.com">jedrekimaja@gmail.com</a>.
-                            </p>
                             <p>
                                 Aby rozwiązać odwieczny problem weselnych strojów, zachęcamy do angażownia się w obowiązującą konwencję: <b><i>złoto</i></b> lub <b><i>wąsy</i></b>. Planujemy wyłonić i nagrodzić osoby w najlepszych strojach.
+                            </p>
+                            <p class="intro-text">
+                                Prosimy o potwierdzenie przybycia do 10 sierpnia, drogą mailową - na adres <a href="mailto:jedrekimaja@gmail.com">jedrekimaja@gmail.com</a>.
                             </p>
                             <a href="#reception-map" class="btn btn-circle page-scroll">
                                 <i class="fa fa-angle-double-down animated"></i>
