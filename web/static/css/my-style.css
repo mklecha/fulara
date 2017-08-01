@@ -47,6 +47,12 @@
     }
 }
 
+@media (min-width: 768px) {
+    .intro .intro-body .brand-heading {
+        margin-top: 290px;
+    }
+}
+
 #about .fa {
     font-size: 20px;
 }
@@ -62,6 +68,21 @@
 
 .wedding .btn-circle {
     margin-bottom: 20px;
+}
+
+.wedding .btnghost {
+    margin-bottom: 20px;
+    border: 2px solid #eee;
+    color: #eee;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.wedding .btnghost:hover {
+    background-color: #eee;
+    color: #333;
+    border: 2px solid #eee;
+    text-decoration: none;
 }
 
 .map iframe {
@@ -91,6 +112,7 @@
     .margined {
         margin-top: 150px;
     }
+
     .wedding .margined {
         margin-bottom: 100px;
     }

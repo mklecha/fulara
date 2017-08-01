@@ -21,13 +21,13 @@
                                 Plan dojazdu znajduje się <a href="#reception-map" class="page-scroll">poniżej.</a>
                             </p>
                             <p>
-                                Aby rozwiązać odwieczny problem weselnych strojów, zachęcamy do angażownia się w obowiązującą konwencję: <b><i>złoto</i></b> lub <b><i>wąsy</i></b>. Planujemy wyłonić i nagrodzić osoby w najlepszych strojach.
+                                Aby rozwiązać odwieczny problem weselnych strojów, zachęcamy do angażownia się w obowiązującą konwencję: <b><i>złoto</i></b> lub <b><i>wąsy</i></b>. Planujemy wyłonić i nagrodzić osoby w najzłotszych strojach i z najlepszym wąsem
                             </p>
                             <p class="intro-text">
                                 Prosimy o potwierdzenie przybycia do 10 sierpnia, drogą mailową - na adres <a href="mailto:jedrekimaja@gmail.com">jedrekimaja@gmail.com</a>.
                             </p>
-                            <a href="#reception-map" class="btn btn-circle page-scroll">
-                                <i class="fa fa-angle-double-down animated"></i>
+                            <a href="#reception-text" class="btnghost page-scroll">
+                                <i class="fa fa-angle-double-down"></i>&nbsp;Prezenty&nbsp;<i class="fa fa-angle-double-down"></i>
                             </a>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
             </div>
         </header>
 
-        <section id="reception-map" class="map">
+        <section id="reception-text" class="map">
             <div class="row text-center">
                 <div class="container reception-text margined-side wow fadeInLeft">
                     <h2>A jeżeli...</h2>
@@ -52,10 +52,16 @@
                         <a href="gifts.html" class="btnghost"><i class="fa fa-gift"></i>Przejdź do listy prezentów</a>
                     </p>
                 </div>
-                <div class="wow fadeInRight">
+                <div id="reception-map" class="wow fadeInRight">
                     <h2>Mapa dojazdu do sali weselnej</h2>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d863.9483614076539!2d21.014412032187852!3d52.23221255107104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471eccf46e60f2af%3A0x32a4ecd77712044d!2sMarzyciele+i+Rzemie%C5%9Blnicy.+Dom+Innowacji+Spo%C5%82ecznych.!5e0!3m2!1spl!2spl!4v1501245283580"
                             frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="container reception-text margined-side wow fadeInLeft">
+                    <h2>Informacja</h2>
+                    <p style="font-weight: bold">
+                        Informujemy, że spod kościoła nie będzie zorganizowanego dojazdu do sali weselnej. Oba miejsca są położone w okolicy niesprzyjającej parkowaniu samochodu, dzieli je jednak niewielka odległość więc zachęcamy do skorzystania z komunikacji miejskiej, taksówek, rowerów lub przy dobrej pogodzie z własnych nóg ;)
+                    </p>
                 </div>
             </div>
         </section>
