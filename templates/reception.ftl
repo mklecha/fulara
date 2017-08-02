@@ -8,7 +8,7 @@
 		<@header.header 'reception' content.logged />
 
         <!-- Intro Header -->
-        <header class="wedding">
+        <header class="wedding reception">
             <div class="intro-body">
                 <div class="container">
                     <div class="row margined">

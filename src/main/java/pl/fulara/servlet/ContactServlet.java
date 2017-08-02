@@ -16,7 +16,7 @@ import java.io.IOException;
 public class ContactServlet extends HttpServlet {
 
     private String ftlTemplateDir;
-    private String templateName = "contact.ftl";
+    private final String templateName = "contact.ftl";
 
 
     @Override
