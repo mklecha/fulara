@@ -8,9 +8,9 @@
 		<@header.header 'reception' content.logged />
 
 
-        <section id="gifts" class="wedding">
+        <section id="gifts" class="wedding reception">
 
-            <div style="margin-top: 100px;">
+            <div style="margin-top: 100px;margin-bottom: 50px;">
                 <h1 class="wow fadeInDown">Lista prezentów</h1>
 
                 <div class="container">
@@ -30,7 +30,9 @@
                         </div>
                     </div>
                 <#else>
-                    <div><h2>Jeszcze nic tu nie ma, ale zajrzyj niedługo, Maja z Jędrkiem pilnie pracują nad wypełnieniem tej listy!</h2></div>
+                    <div class="wow fadeInUp">
+                        <h2>Jeszcze nic tu nie ma, ale zajrzyj niedługo, pilnie pracujemy nad wypełnieniem tej listy!</h2>
+                    </div>
                 </#list>
                 </div>
 

@@ -48,6 +48,9 @@
                     <p>
                         Gdyby ktoś z jakichś przyczyn chciał się wycofać z podjętej wcześniej rezerwacji należy również dać znać <i>Jankowi</i>
                     </p>
+                    <p>
+                        W związku z naszym półrocznym wyjazdem do Barcelony z wdzięcznością przyjmiemy także prezenty zawarte w kopercie.
+                    </p>
                     <p class="go-to-gifts">
                         <a href="gifts.html" class="btnghost"><i class="fa fa-gift"></i>Przejdź do listy prezentów</a>
                     </p>
